@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1943.54 581.94" role="img" aria-label="ArthRegen">
+  <g>
+    <polygon fill="#ffffff" opacity=".95" points="146.99 508.36 406.69 508.36 276.84 283.45 146.99 508.36"/>
+    <path fill="#ffffff" opacity=".7" d="M471.04,323.83c-21.22-36.75-19.25-80.52,1.37-114.38l-76.42-132.36-103.28,178.89,145.71,252.38h206.57l-74.2-128.53c-39.63.92-78.53-19.26-99.74-56.01Z"/>
+    <circle fill="#ffffff" cx="568.07" cy="267.81" r="87.26"/>
+  </g>
+  <text fill="#ffffff" font-family="'Inter','Pretendard Variable','Avenir Next',-apple-system,'Segoe UI',Arial,sans-serif" font-size="212.09" font-weight="600" letter-spacing=".02em" transform="translate(717.27 391.67)"><tspan x="0" y="0">ArthRegen</tspan></text>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1943.54 581.94" role="img" aria-label="ArthRegen">
+  <defs>
+    <linearGradient id="arBlade1" x1="146.99" y1="395.91" x2="644.99" y2="395.91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#293a8e"/>
+      <stop offset=".42" stop-color="#28759b"/>
+      <stop offset=".81" stop-color="#28a6a5"/>
+      <stop offset="1" stop-color="#28b9aa"/>
+    </linearGradient>
+    <linearGradient id="arBlade2" x1="146.99" y1="292.72" x2="644.99" y2="292.72" xlink:href="#arBlade1"/>
+    <linearGradient id="arOrb" x1="2336.71" y1="7280.63" x2="2511" y2="7280.63" gradientTransform="translate(-5171.36 -4825.47) rotate(-30)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#293a8e"/>
+      <stop offset=".22" stop-color="#285193"/>
+      <stop offset=".69" stop-color="#288da0"/>
+      <stop offset="1" stop-color="#28b9aa"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <polygon fill="url(#arBlade1)" points="146.99 508.36 406.69 508.36 276.84 283.45 146.99 508.36"/>
+    <path fill="url(#arBlade2)" d="M471.04,323.83c-21.22-36.75-19.25-80.52,1.37-114.38l-76.42-132.36-103.28,178.89,145.71,252.38h206.57l-74.2-128.53c-39.63.92-78.53-19.26-99.74-56.01Z"/>
+    <circle fill="#ffffff" cx="568.07" cy="267.81" r="87.26"/>
+    <circle fill="url(#arOrb)" cx="568.07" cy="267.81" r="87.5" transform="translate(-22.98 480.13) rotate(-45)"/>
+  </g>
+  <text fill="#1e3a8a" font-family="'Inter','Pretendard Variable','Avenir Next',-apple-system,'Segoe UI',Arial,sans-serif" font-size="212.09" font-weight="600" letter-spacing=".02em" transform="translate(717.27 391.67)"><tspan x="0" y="0">ArthRegen</tspan></text>
+</svg>

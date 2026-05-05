@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1943.54 581.94">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2a3791;
+        font-family: Avenir-Medium, Avenir;
+        font-size: 212.09px;
+        font-weight: 500;
+        letter-spacing: .02em;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="146.99" y1="395.91" x2="644.99" y2="395.91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#293a8e"/>
+      <stop offset=".42" stop-color="#28759b"/>
+      <stop offset=".81" stop-color="#28a6a5"/>
+      <stop offset="1" stop-color="#28b9aa"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="146.99" y1="292.72" x2="644.99" y2="292.72" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="2336.71" y1="7280.63" x2="2511" y2="7280.63" gradientTransform="translate(-5171.36 -4825.47) rotate(-30)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#293a8e"/>
+      <stop offset=".22" stop-color="#285193"/>
+      <stop offset=".69" stop-color="#288da0"/>
+      <stop offset="1" stop-color="#28b9aa"/>
+    </linearGradient>
+  </defs>
+  <text class="cls-1" transform="translate(717.27 391.67)"><tspan x="0" y="0">ArthRegen</tspan></text>
+  <g>
+    <g>
+      <polygon class="cls-4" points="146.99 508.36 406.69 508.36 276.84 283.45 146.99 508.36"/>
+      <path class="cls-3" d="M471.04,323.83c-21.22-36.75-19.25-80.52,1.37-114.38l-76.42-132.36-103.28,178.89,145.71,252.38h206.57l-74.2-128.53c-39.63.92-78.53-19.26-99.74-56.01Z"/>
+    </g>
+    <circle class="cls-5" cx="568.07" cy="267.81" r="87.26"/>
+    <circle class="cls-2" cx="568.07" cy="267.81" r="87.15" transform="translate(-22.98 480.13) rotate(-45)"/>
+  </g>
+</svg>
