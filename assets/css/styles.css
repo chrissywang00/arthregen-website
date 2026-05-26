@@ -381,7 +381,7 @@ main > section:last-child { padding-bottom: clamp(90px, 8.8vw, 138px); }
   height: 42px;
 }
 @media (max-width: 720px) {
-  .site-nav__logo img { height: 36px; }
+  .site-nav__logo img { height: 40px; }
 }
 
 /* Footer brand logo */
@@ -1063,12 +1063,12 @@ a.card.card--link:focus-visible {
 .timeline__item ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 0 -16px;
+  margin: 0;
   display: grid;
   gap: 4px;
 }
 .timeline__item li {
-  padding: 14px 0 14px 62px;
+  padding: 14px 0;
   color: var(--ink-soft);
   font-size: .875rem;
   line-height: 1.55;
@@ -1076,16 +1076,14 @@ a.card.card--link:focus-visible {
 }
 .timeline__item li:first-child { border-top: 0; padding-top: 6px; }
 .timeline__item li strong {
-  display: inline-block;
-  min-width: 52px;
+  display: block;
   color: var(--teal-600);
   font-family: var(--f-mono);
   font-weight: 700;
   font-size: .875rem;
   letter-spacing: .1em;
   text-transform: uppercase;
-  margin-left: -62px;
-  margin-right: 10px;
+  margin-bottom: 6px;
 }
 
 /* -------- Team -------- */
@@ -1137,6 +1135,12 @@ a.card.card--link:focus-visible {
 .table-wrap.pipeline-chart {
   max-width: none;
 }
+/* Desktop: cap the pipeline chart to the same 1080px max as the other tables
+   so it lines up with the Competitive positioning table below. Columns
+   compress proportionally via table-layout: auto. */
+@media (min-width: 821px) {
+  .table-wrap.pipeline-chart { max-width: 1080px; }
+}
 table.ir {
   width: 100%;
   border-collapse: collapse;
@@ -1178,11 +1182,38 @@ table.ir th.is-ours { background: var(--teal); color: #fff; border-bottom: 1px s
      (which divides the colspan=5 track into 5 equal 1fr columns) line up
      exactly with the header column boundaries. min-width must exceed the
      widest header (PRECLINICAL + padding) so all 5 collapse to the same width. */
-  width: 115px;
-  min-width: 115px;
-  padding-left: 8px;
-  padding-right: 8px;
+  width: 95px;
+  min-width: 95px;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 11px;
+  color: #4b5563;
 }
+/* Desktop-only break inside pipeline Indication cells — hidden on mobile so
+   the text flows naturally inside the scroll-wrapped column */
+.desktop-only-break { display: inline; }
+@media (max-width: 820px) {
+  .desktop-only-break { display: none; }
+}
+/* Tighten the Indication column so the stage track (and bars) start closer
+   to the indication text instead of leaving a wide gap */
+.pipeline-table thead th:nth-child(1),
+.pipeline-table tbody th:nth-child(1) {
+  width: 180px;
+}
+.pipeline-table thead th:nth-child(2),
+.pipeline-table tbody td:nth-child(2) {
+  width: 180px;
+}
+.pipeline-table thead th:nth-child(3),
+.pipeline-table tbody td:nth-child(3) {
+  width: 270px;
+}
+/* Equalize tbody row heights so single-line rows match the two-line ones */
+.pipeline-table tbody tr { height: 84px; }
+/* Higher specificity to win over `body[data-lang="en"] table.ir thead th` */
+body[data-lang="en"] .pipeline-table th.pipeline-stage,
+body[data-lang="ko"] .pipeline-table th.pipeline-stage { font-size: 11px; }
 .pipeline-table td.pipeline-track {
   position: relative;
   padding: 0;
@@ -1202,8 +1233,8 @@ table.ir th.is-ours { background: var(--teal); color: #fff; border-bottom: 1px s
 .pipeline-track__grid span:last-child { border-right: 0; }
 .pipeline-bar {
   position: relative;
-  margin: 20px 0;
-  height: 20px;
+  margin: 18px 0;
+  height: 26px;
   width: var(--bar-end, 25%);
   border-radius: 3px;
   background: linear-gradient(90deg, #23579A 0%, #28759B 100%);
@@ -2132,6 +2163,16 @@ body[data-lang="en"] .page-hero h1 {
   font-size: clamp(2.25rem, 4vw, 3.25rem);
   max-width: 26ch;
 }
+/* About page, English, desktop only — slightly trim the page-hero copy size */
+@media (min-width: 821px) {
+  body.page-about[data-lang="en"] .page-hero h1 { font-size: clamp(2rem, 3.4vw, 2.75rem); }
+  body.page-about[data-lang="en"] .page-hero p { font-size: clamp(.9375rem, 1.05vw, 1.0625rem); }
+  /* English desktop, all non-home pages: tighten vertical spacing between
+     eyebrow / h1 / p inside the page-hero container */
+  body[data-lang="en"]:not(.home) .page-hero .eyebrow { margin-bottom: 16px; }
+  body[data-lang="en"]:not(.home) .page-hero h1 { margin-bottom: 14px; }
+  body[data-lang="en"]:not(.home) .page-hero p { margin-top: 0; margin-bottom: 12px; }
+}
 /* Match the Korean page-hero height in English too. Reduce EN's top/bottom
    padding so the smaller English content still sits comfortably centered
    within the same band, without extending the section's overall height. */
@@ -2164,8 +2205,12 @@ body[data-lang="en"] .page-hero {
   body[data-lang="en"] .page-hero h1 { font-size: 34px; line-height: 1.15; }
   .page-hero p { font-size: 14px; }
   body[data-lang="en"] .page-hero p { font-size: 14px; }
-  /* English-only: slightly taller page-hero banner on mobile */
-  body[data-lang="en"] .page-hero { padding-top: 96px; padding-bottom: 96px; }
+  /* English-only: trim page-hero padding a bit on mobile so the band isn't
+     visibly taller than the Korean version */
+  body[data-lang="en"] .page-hero { padding-top: 72px; padding-bottom: 72px; }
+  /* Mobile: shorten the page-hero band — the default 560px floor leaves a
+     lot of empty navy above the eyebrow on phones */
+  .page-hero { min-height: 480px; }
   /* News page only (both languages): reduce hero height on mobile.
      Must override the unified .page-hero min-height: clamp(560px, ...). */
   body.page-news .page-hero { padding-top: 32px; padding-bottom: 110px; min-height: 440px; justify-content: flex-end; }
@@ -2920,16 +2965,14 @@ body.page-founder #relevance .pillars { grid-auto-rows: 1fr; }
 @media (max-width: 820px) {
   .ceo-greeting { grid-template-columns: 1fr; gap: 36px; }
   .ceo-greeting__photo { max-width: 180px; position: static; aspect-ratio: auto; }
-  /* Stack timeline month label above description instead of side-by-side */
-  .timeline__item li { padding-left: 0; }
-  .timeline__item li strong {
-    display: block;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 6px;
-    min-width: 0;
-    font-size: 1rem;
-  }
+  /* Mobile: bump the month label size for readability */
+  .timeline__item li strong { font-size: 1rem; }
+  /* Mobile: drop the divider line between timeline list items and tighten
+     the vertical gap between them */
+  .timeline__item li { border-top: 0; padding: 8px 0; }
+  .timeline__item li:first-child { padding-top: 6px; }
+  /* Mobile: tighten vertical spacing around the year/title block */
+  .timeline__title { margin: 8px 0 10px; }
 }
 
 /* Hide whichever language is inactive */
@@ -3000,22 +3043,24 @@ body[data-lang="en"] .feature-row p {
   /* Tighten the gap between the CEO photo and the message body on mobile */
   #ceo .ceo-greeting { gap: 20px; }
   /* Slightly smaller portrait on mobile */
-  #ceo .ceo-greeting__photo { max-width: 150px; }
+  #ceo .ceo-greeting__photo { max-width: 160px; }
   /* Slightly inset the company-info cards on mobile so they don't run edge-to-edge */
   #company .cards { padding-inline: 10px; }
   /* Trim bottom padding inside the company cards on mobile */
   #company .card { padding-bottom: 20px; }
 }
-/* English-only: stack the CEO lead paragraph BELOW the h2 instead of beside
-   it. Korean keeps the 2-column layout. */
-body[data-lang="en"] #ceo .sec-head {
+/* Stack the CEO lead paragraph BELOW the h2 instead of beside it (both
+   languages) so the subtext aligns with the heading's left edge. */
+#ceo .sec-head {
   grid-template-columns: 1fr;
+  gap: 8px;
 }
-body[data-lang="en"] #ceo .sec-head p {
+#ceo .sec-head p {
   padding-top: 4px;
   max-width: none;
 }
-body[data-lang="en"] #ceo .sec-head { gap: 8px; }
+/* Korean: slightly larger lead under the CEO h2 */
+body[data-lang="ko"] #ceo .sec-head p.lead { font-size: 21px; }
 .feature-row p {
   font-size: 1.0625rem;
   line-height: 1.7;
