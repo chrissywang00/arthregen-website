@@ -9,7 +9,8 @@
   <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Pretendard+Variable&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Pretendard+Variable&family=Gowun+Dodum&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.typekit.net/jih5vxr.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body data-lang="ko">
@@ -19,14 +20,19 @@
       <a href="index.html" class="site-nav__logo" aria-label="ArthRegen home">
         <img src="assets/img/logo.svg" alt="ArthRegen" />
       </a>
-      <nav aria-label="Primary">
+            <nav aria-label="Primary">
         <ul class="site-nav__links">
           <li><a href="index.html"><span lang="en">Home</span><span lang="ko">홈</span></a></li>
           <li><a href="about.html" class="is-active"><span lang="en">About</span><span lang="ko">회사 소개</span></a></li>
-          <li><a href="pipeline.html"><span lang="en">Pipeline</span><span lang="ko">파이프라인</span></a></li>
+          <li><a href="rd.html"><span lang="en">R&D</span><span lang="ko">R&D</span></a></li>
+          <li class="has-dropdown"><a href="news.html" aria-haspopup="true" aria-expanded="false"><span lang="en">News</span><span lang="ko">뉴스</span><span class="dropdown-caret" aria-hidden="true">▾</span></a>
+            <ul class="site-nav__dropdown" aria-label="News sections">
+              <li><a href="news.html#announcements"><span lang="en">Announcements</span><span lang="ko">공지사항</span></a></li>
+              <li><a href="news.html#press"><span lang="en">Press coverage</span><span lang="ko">언론보도</span></a></li>
+              <li><a href="news.html#media"><span lang="en">Media</span><span lang="ko">미디어</span></a></li>
+            </ul>
+          </li>
           <li><a href="investors.html"><span lang="en">Investors</span><span lang="ko">투자정보</span></a></li>
-          <li class="has-dropdown"><a href="news.html" aria-haspopup="true" aria-expanded="false"><span lang="en">News</span><span lang="ko">뉴스</span><span class="dropdown-caret" aria-hidden="true">▾</span></a><ul class="site-nav__dropdown" aria-label="News sections"><li><a href="news.html#press"><span lang="en">Press coverage</span><span lang="ko">언론보도</span></a></li><li><a href="news.html#media"><span lang="en">Media</span><span lang="ko">미디어</span></a></li><li><a href="news.html#notices"><span lang="en">Announcements</span><span lang="ko">공지사항</span></a></li></ul></li>
-          <li><a href="contact.html"><span lang="en">Contact</span><span lang="ko">문의</span></a></li>
         </ul>
       </nav>
       <div class="site-nav__right">
@@ -47,10 +53,10 @@
   <section class="page-hero">
     <div class="container" data-reveal>
       <div class="eyebrow"><span lang="en">About ArthRegen</span><span lang="ko">회사 소개</span></div>
-      <h1><span lang="en">A regenerative medicine company built from the operating room outward.</span><span lang="ko">수술실에서 출발해 설계된 재생의학 기업.</span></h1>
+      <h1><span lang="en">Problems discovered in the operating room — solved by a regenerative medicine platform.</span><span lang="ko">수술 현장에서 발견한 문제를, 재생의학 플랫폼으로 해결합니다.</span></h1>
       <p>
-        <span lang="en">ArthRegen was founded in 2025 as a spin-out from Samsung Medical Center's Department of Orthopedic Surgery. The science is rigorous because the surgical reality demanded it: surgeons, scientists, and engineers, working as one team, on one regenerative platform.</span>
-        <span lang="ko">아스리젠은 2025년 삼성서울병원 정형외과에서 스핀오프하여 설립되었습니다. 수술 현장의 요구가 과학을 정교하게 만들었고, 외과의·과학자·엔지니어가 하나의 재생의학 플랫폼으로 한 팀을 이루고 있습니다.</span>
+        <span lang="en">ArthRegen was founded in 2025 as a spin-off from the Department of Orthopedic Surgery at Samsung Medical Center. Starting from unmet clinical needs encountered at the point of care, surgeons, scientists, and engineers together develop a regenerative medicine platform for joint tissue regeneration and functional recovery.</span>
+        <span lang="ko">아스리젠은 2025년 삼성서울병원 정형외과에서 스핀오프하여 설립되었습니다. 임상 현장의 미충족 수요에서 출발해, 외과의·과학자·공학자가 함께 관절 조직의 재생과 기능 회복을 위한 재생의학 플랫폼을 개발합니다.</span>
       </p>
     </div>
   </section>
@@ -60,11 +66,11 @@
     <div class="container sec-head" data-reveal>
       <div>
         <div class="eyebrow"><span lang="en">CEO Greeting</span><span lang="ko">창업자의 인사말</span></div>
-        <h2><span lang="en">A surgeon's letter.</span><span lang="ko">외과의의 인사말.</span></h2>
+        <h2><span lang="en"><span class="grad">Founder's</span> message.</span><span lang="ko"><span class="grad">창업자</span> 인사말.</span></h2>
       </div>
       <p class="lead">
-        <span lang="en">From Joon Ho Wang, MD/PhD — surgeon and founder of ArthRegen.</span>
-        <span lang="ko">아스리젠의 정형외과 의사이자, 창업자 왕준호 (MD/PhD)</span>
+        <span lang="en">Beyond the limits of the operating room —<br/>building joint regeneration solutions that reach more patients.</span>
+        <span lang="ko">임상 현장의 한계를 넘어, 더 많은 환자에게 닿는 관절 재생 솔루션을 만들겠습니다.</span>
       </p>
     </div>
     <div class="container">
@@ -72,22 +78,22 @@
         <div class="ceo-greeting__photo">
           <img src="assets/img/team/ceo-portrait.jpg" alt="Joon Ho Wang, MD/PhD" />
         </div>
-        <div class="ceo-greeting__body">
+         <div class="ceo-greeting__body">
           <div lang="en">
-            <p>Hello — I'm Joon Ho Wang, CEO of ArthRegen Co., Ltd.</p>
-            <p>ArthRegen was founded to materially improve the lives of patients living with joint pain, by combining regenerative-medicine biology with AI-driven 3D printing.</p>
-            <p>As an orthopedic surgeon specializing in joint disease, I've spent years caring for patients with cartilage and meniscus damage and chronic pain. In the operating room I felt — every day — the absence of a true regenerative option. I kept the research alive, but found that academic results rarely reach the patients who actually need them. ArthRegen exists to close that gap.</p>
-            <p>Our goal is practical: provide evidence-based, scientifically rigorous solutions that help more people regain healthy knees and reclaim the freedom of daily life.</p>
-            <p>We will continue to set a new standard in joint regeneration through patient-centered research and clinically grounded technology development. We appreciate your continued attention and support.</p>
+            <p>Hello. I am Joon-Ho Wang, CEO of ArthRegen Co., Ltd.</p>
+            <p>As an orthopedic surgeon specializing in joint disorders, I have spent many years treating patients whose quality of life has been diminished by joint damage and chronic pain. Joint disease is more than physical pain — it brings constraints on daily life and emotional suffering alongside it.</p>
+            <p>Encountering these patients in the operating room and clinic, I continued research into regenerative therapies that could more fundamentally restore damaged joints. Yet however meaningful academic outcomes might be, I came to feel deeply that research has limits if it does not translate into actual patient treatment and improved lives.</p>
+            <p>ArthRegen began from that recognition. The company was founded to translate laboratory results into real therapeutic technologies, and to improve the lives of patients suffering from joint damage and pain. The path of founding a company is not easy, but seeing what was once only a dream take shape — evolving into solutions that can help more patients — has brought both anticipation and meaning.</p>
+            <p>Going forward, ArthRegen will continue to set a new standard for joint regeneration therapy through patient-centered research and technology development grounded in clinical evidence. I ask for your continued interest and support.</p>
             <p>Thank you.</p>
           </div>
           <div lang="ko">
             <p>안녕하십니까.</p>
             <p>아스리젠㈜ 대표이사 왕준호입니다.</p>
-            <p>아스리젠은 재생의학 기반 바이오 기술과 AI 기반 3D 프린팅 기술을 융합하여, 관절 통증으로 고통받는 환자들의 삶의 질을 실질적으로 향상시키고자 설립된 기업입니다.</p>
-            <p>저는 관절을 전공한 정형외과 의사로서, 오랜 기간 관절 손상과 만성 통증에 시달리는 환자들을 직접 진료해 왔습니다. 임상 현장에서 근본적인 관절 재생 치료의 필요성을 절감하며 관련 연구를 지속해왔지만 학술적 성과가 실제 치료 현장으로 이어지지 못하는 한계를 경험했습니다. 이러한 연구 결과를 실제 의료 현장에서 구현하여 환자들의 삶을 변화시키고자 아스리젠을 창업하게 되었습니다.</p>
-            <p>아스리젠은 과학적 근거에 기반한 혁신적 기술을 통해 더 많은 사람들이 건강한 무릎을 되찾고, 일상의 자유를 누릴 수 있도록 실질적인 솔루션을 제공하는 것을 목표로 하고 있습니다.</p>
-            <p>앞으로도 환자 중심의 연구와 임상적 근거에 기반한 기술 개발을 통해 관절 재생 치료의 새로운 기준을 만들어가겠습니다. 지속적인 관심과 성원을 부탁드립니다.</p>
+            <p>저는 관절 전문 정형외과 의사로서, 오랜 시간 관절 손상과 만성 통증으로 삶의 질이 저하된 환자들을 진료해왔습니다. 관절 질환은 단순한 육체적 통증을 넘어, 일상생활의 제약과 정신적 고통까지 동반하는 문제입니다.</p>
+            <p>임상 현장에서 이러한 환자들을 마주하며, 저는 손상된 관절을 보다 근본적으로 회복시키기 위한 재생 치료 연구를 지속해왔습니다. 그러나 연구가 아무리 의미 있는 학술적 성과로 이어지더라도, 실제 환자의 치료와 삶의 개선으로 연결되지 않는다면 한계가 있다는 점을 절실히 느꼈습니다.</p>
+            <p>아스리젠은 그 문제 의식에서 출발한 회사입니다. 연구실의 성과를 실제 치료 기술로 연결하고, 관절 손상과 통증으로 고통받는 환자들의 삶을 개선하기 위해 설립되었습니다. 창업의 과정은 쉽지 않지만, 꿈으로만 생각했던 일이 현실화되고 더 많은 환자에게 도움이 될 수 있는 솔루션으로 발전해가는 과정에서 큰 기대와 보람을 느끼고 있습니다.</p>
+            <p>아스리젠은 앞으로도 환자 중심의 연구와 임상적 근거에 기반한 기술 개발을 통해, 관절 재생 치료의 새로운 기준을 만들어가겠습니다. 지속적인 관심과 성원을 부탁드립니다.</p>
             <p>감사합니다.</p>
           </div>
           <div class="ceo-greeting__sign">
@@ -106,31 +112,42 @@
       <div class="feature-row" data-reveal>
         <div>
           <div class="eyebrow"><span lang="en">Mission</span><span lang="ko">미션</span></div>
-          <h2><span lang="en">Healing motion, <span class="grad">restoring moments.</span></span><span lang="ko">움직임을 치유하고, <span class="grad">순간을 되찾다.</span></span></h2>
+          <h2><span lang="en">We realize the <span class="grad">regeneration and functional recovery</span> of damaged joints.</span><span lang="ko">손상된 관절의 <span class="grad">재생과 기능 회복</span>을 실현합니다.</span></h2>
           <p>
-            <span lang="en">Arthritis doesn't only limit mobility — it removes the small, daily moments that make a life rich. Walking to meet a friend. Climbing stairs without thinking. Lifting a grandchild. Our work is to return those moments.</span>
-            <span lang="ko">관절염은 단지 움직임을 제한하는 것이 아니라, 삶을 풍요롭게 하는 소소한 일상의 순간들을 앗아갑니다. 친구를 만나러 걷는 길, 아무 생각 없이 오르는 계단, 손주와 뛰놀던 순간 — 우리가 되찾아 드리려는 것이 바로 그 순간들입니다.</span>
+            <span lang="en">ArthRegen develops clinically applicable joint regeneration solutions by integrating bio, regenerative biomaterial, and AI-driven 3D printing technologies. Starting from unmet clinical needs, we aim to contribute to improving patients' quality of life through technologies that are usable in real clinical practice.</span>
+            <span lang="ko">아스리젠은 바이오·재생소재·AI 기반 3D 프린팅 기술을 융합해 임상 현장에서 활용 가능한 관절 재생 솔루션을 개발합니다. 임상 현장의 미충족 수요에서 출발해, 실제 치료 현장에서 활용 가능한 기술로 환자의 삶의 질 개선에 기여하고자 합니다.</span>
           </p>
           <div class="eyebrow mt-m"><span lang="en">Vision</span><span lang="ko">비전</span></div>
-          <h3 style="color:var(--navy)"><span lang="en">A future where damaged joints are regenerated, not replaced.</span><span lang="ko">손상된 관절을 대체가 아닌 재생으로 회복하는 미래.</span></h3>
+          <h2><span lang="en">A <span class="grad">global leader</span> innovating next-generation joint regeneration.</span><span lang="ko">차세대 관절 재생을 혁신하는 <span class="grad">글로벌 리더.</span></span></h2>
           <p>
-            <span lang="en">Our long-term goal is a fully regenerative bio-native joint — damaged tissue restored to its pre-injury state, not replaced with metal. The pipeline today is step one on that roadmap.</span>
-            <span lang="ko">장기 목표는 금속 인공관절로의 치환이 아닌, 손상 전 상태로 되돌리는 바이오 인공관절입니다. 현재의 파이프라인은 그 여정의 첫 번째 단계입니다.</span>
+            <span lang="en">Built on patient-specific precision therapy and functional regeneration technology, ArthRegen aims to grow into a global leader in next-generation joint regeneration. By building a joint regeneration platform that integrates patient-specific precision therapy, bio-based artificial joints, and functional regeneration technology, we will grow into a global specialized company in joint regeneration.</span>
+            <span lang="ko">아스리젠은 환자 맞춤형 정밀치료와 기능적 재생 기술을 바탕으로, 차세대 관절 재생 분야의 글로벌 리더로 성장하고자 합니다. 환자 맞춤형 정밀치료, 바이오 기반 인공관절, 기능적 재생 기술을 통합한 관절 재생 플랫폼을 구축하여 글로벌 관절 재생 전문 기업으로 성장하겠습니다.</span>
           </p>
         </div>
-        <div class="feature-row__media" data-zoom aria-label="Enlarge: knee osteoarthritis stages and the ArthRegen regenerative treatment timeline">
-          <img src="assets/img/products/joint-progression.png" alt="Knee osteoarthritis stages 1–4 and ArthRegen regenerative treatment timeline" />
+        <div class="mission-vision-visual-wrap">
+          <figure class="mission-vision-visual" data-zoom aria-label="Enlarge mission and vision diagram">
+            <img
+              src="assets/img/about/mission-vision.png"
+              alt="아스리젠 미션·비전 다이어그램 — 재생의학 기반 바이오 기술, 인체조직 유래 재생소재, AI 기반 3D 프린팅 기술이 결합된 관절 재생 솔루션과 차세대 관절 재생 분야 글로벌 리더로의 성장 로드맵"
+              loading="lazy"
+            />
+          </figure>
+          <p class="zoom-hint">
+            <span aria-hidden="true">⊕</span>
+            <span lang="en">Click the image to enlarge</span>
+            <span lang="ko">이미지를 클릭하면 확대됩니다</span>
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- COMPANY OVERVIEW (slide 8 — title kept, subtitle deleted, content tightened) -->
-  <section class="section">
+  <section class="section" id="company">
     <div class="container sec-head" data-reveal>
       <div>
         <div class="eyebrow"><span lang="en">Company</span><span lang="ko">회사 현황</span></div>
-        <h2><span lang="en">At a glance</span><span lang="ko">회사 개요</span></h2>
+        <h2><span lang="en">At a <span class="grad">glance.</span></span><span lang="ko">회사 <span class="grad">개요.</span></span></h2>
       </div>
     </div>
 
@@ -139,19 +156,19 @@
         <div class="card">
           <h3><span lang="en">Corporate profile</span><span lang="ko">회사 정보</span></h3>
           <div class="contact-info__row">
-            <div class="contact-info__label"><span lang="en">Name</span><span lang="ko">회사명</span></div>
+            <div class="contact-info__label"><span lang="en">Company name</span><span lang="ko">회사명</span></div>
             <div class="contact-info__value"><span lang="en">ArthRegen Co., Ltd.</span><span lang="ko">주식회사 아스리젠</span></div>
           </div>
           <div class="contact-info__row">
             <div class="contact-info__label">CEO</div>
-            <div class="contact-info__value"><span lang="en">Joon Ho Wang, MD/PhD</span><span lang="ko">왕준호 (MD/PhD)</span></div>
+            <div class="contact-info__value"><span lang="en">Joon-Ho Wang, MD/PhD</span><span lang="ko">왕준호 (MD/PhD)</span></div>
           </div>
           <div class="contact-info__row">
-            <div class="contact-info__label"><span lang="en">Founded</span><span lang="ko">설립일</span></div>
-            <div class="contact-info__value">March 20, 2025</div>
+            <div class="contact-info__label"><span lang="en">Established</span><span lang="ko">설립일</span></div>
+            <div class="contact-info__value">March 20, 2025 / 2025년 3월 20일</div>
           </div>
           <div class="contact-info__row">
-            <div class="contact-info__label"><span lang="en">HQ</span><span lang="ko">본사</span></div>
+            <div class="contact-info__label"><span lang="en">Headquarters</span><span lang="ko">본사</span></div>
             <div class="contact-info__value">
               <span lang="en">Samsung Medical Center B3, 81 Irwon-ro, Gangnam-gu, Seoul</span>
               <span lang="ko">서울시 강남구 일원로 81, 삼성서울병원 지하 3층 3-1호</span>
@@ -161,265 +178,54 @@
         <div class="card">
           <h3><span lang="en">Core business</span><span lang="ko">주요 사업</span></h3>
           <div class="contact-info__row">
-            <div class="contact-info__label">Carti-All</div>
-            <div class="contact-info__value"><span lang="en">Allogeneic stem-cell-derived cartilage cell therapy (advanced biologic)</span><span lang="ko">동종 줄기세포 유래 관절연골 세포치료제 (첨단바이오의약품)</span></div>
+            <div class="contact-info__label">AR-001</div>
+            <div class="contact-info__value"><span lang="en">Allogeneic stem-cell-derived cartilage cell therapy (Advanced Biologic)</span><span lang="ko">동종 줄기세포 유래 관절연골 세포치료제 (첨단바이오의약품)</span></div>
           </div>
           <div class="contact-info__row">
-            <div class="contact-info__label">MeniSave</div>
-            <div class="contact-info__value"><span lang="en">Patient-specific bio-friendly meniscus implant (medical device)</span><span lang="ko">환자 맞춤형 생체친화적 반월연골판 임플란트 (의료기기)</span></div>
+            <div class="contact-info__label">AR-002</div>
+            <div class="contact-info__value"><span lang="en">Meniscus-derived regenerative therapy (Human Tissue)</span><span lang="ko">반월연골판 유래 재생 치료제 (인체조직)</span></div>
           </div>
           <div class="contact-info__row">
-            <div class="contact-info__label">MeniFul</div>
-            <div class="contact-info__value"><span lang="en">Meniscus-derived regenerative therapy (human tissue)</span><span lang="ko">반월연골판 유래 재생 치료제 (인체조직)</span></div>
+            <div class="contact-info__label">AR-003</div>
+            <div class="contact-info__value"><span lang="en">Patient-specific, bio-compatible meniscus implant (Medical Device)</span><span lang="ko">환자 맞춤형 생체친화적 반월연골판 임플란트 (의료기기)</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LEADERSHIP -->
-  <section class="section section--alt" id="team">
-    <div class="container sec-head" data-reveal>
-      <div>
-        <div class="eyebrow"><span lang="en">Leadership</span><span lang="ko">경영진</span></div>
-        <h2><span lang="en"><span class="grad">Surgeon-scientists</span> and engineers.</span><span lang="ko"><span class="grad">외과의</span>, 과학자, 엔지니어.</span></h2>
-      </div>
-      <p class="lead">
-        <span lang="en">Twenty-plus years of orthopedic surgery, paired with deep specialization in stem-cell therapy, decellularization, 3D printing, and AI-driven design.</span>
-        <span lang="ko">20년 이상의 정형외과 수술 경험과 줄기세포 치료, 탈세포화, 3D 프린팅, AI 설계 등 전문 분야가 한 팀으로 모였습니다.</span>
-      </p>
-    </div>
-
-    <div class="container">
-      <div class="team" data-reveal>
-        <div class="team__card">
-          <div class="team__avatar">JW</div>
-          <div class="team__role">CEO</div>
-          <div class="team__name"><span lang="en">Joon Ho Wang, MD/PhD</span><span lang="ko">왕준호 (MD/PhD)</span></div>
-          <div class="team__bio">
-            <ul>
-              <li><span lang="en">Chair, Dept. of Orthopedic Surgery, Samsung Medical Center</span><span lang="ko">삼성서울병원 정형외과 과장</span></li>
-              <li><span lang="en">Chair Professor, SKKU School of Medicine</span><span lang="ko">성균관대학교 의과대학 정형외과 주임교수</span></li>
-              <li><span lang="en">PhD in Medicine, Korea University</span><span lang="ko">고려대학교 의학박사</span></li>
-              <li><span lang="en">13,000+ knee surgeries · 174+ papers · 20+ clinical trials</span><span lang="ko">무릎 수술 13,000건 이상 · 논문 174편 · 임상시험 20건 이상</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="team__card">
-          <div class="team__avatar">JS</div>
-          <div class="team__role">CSO</div>
-          <div class="team__name"><span lang="en">Jiyoon Seo, PhD</span><span lang="ko">서지윤 (PhD)</span></div>
-          <div class="team__bio">
-            <ul>
-              <li><span lang="en">Postdoctoral Fellow, Samsung Medical Center</span><span lang="ko">삼성서울병원 박사후연구원</span></li>
-              <li><span lang="en">PhD, Life Sciences, Seoul National University</span><span lang="ko">서울대학교 생명과학 박사</span></li>
-              <li><span lang="en">Specialty: decellularization, stem-cell organoids, regenerative therapeutics</span><span lang="ko">전문분야: 탈세포화, 줄기세포·오가노이드, 재생 치료제</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="team__card">
-          <div class="team__avatar">YK</div>
-          <div class="team__role"><span lang="en">Principal Scientist</span><span lang="ko">수석연구원</span></div>
-          <div class="team__name"><span lang="en">Yeeun Kim, PhD</span><span lang="ko">김예은 (PhD)</span></div>
-          <div class="team__bio">
-            <ul>
-              <li><span lang="en">PhD, Life Sciences, Seoul National University</span><span lang="ko">서울대학교 생명과학 박사</span></li>
-              <li><span lang="en">Specialty: cartilage &amp; meniscus regeneration, musculoskeletal aging</span><span lang="ko">전문분야: 관절연골·반월연골판 재생, 근골격 노화</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="team__card">
-          <div class="team__avatar">JK</div>
-          <div class="team__role"><span lang="en">Senior Scientist</span><span lang="ko">책임연구원</span></div>
-          <div class="team__name"><span lang="en">Junghwa Kim, PhD</span><span lang="ko">김정화 (PhD)</span></div>
-          <div class="team__bio">
-            <ul>
-              <li><span lang="en">PhD, Mechanical Engineering, Kyungpook National University</span><span lang="ko">경북대학교 기계공학 박사</span></li>
-              <li><span lang="en">Specialty: 3D printing, biomaterials</span><span lang="ko">전문분야: 3D 프린팅, 생체재료</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="team__card">
-          <div class="team__avatar">MK</div>
-          <div class="team__role"><span lang="en">Senior Scientist</span><span lang="ko">책임연구원</span></div>
-          <div class="team__name"><span lang="en">Minhee Kim, MS</span><span lang="ko">김민희 (MS)</span></div>
-          <div class="team__bio">
-            <ul>
-              <li><span lang="en">MS, Life Sciences, Suwon University</span><span lang="ko">수원대학교 생명과학 석사</span></li>
-              <li><span lang="en">Specialty: stem-cell organoids, cell therapeutics, natural-compound screening</span><span lang="ko">전문분야: 줄기세포·오가노이드, 세포치료제, 천연물 스크리닝</span></li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ADVISORY BOARD -->
-  <section class="section" id="advisors">
-    <div class="container sec-head" data-reveal>
-      <div>
-        <div class="eyebrow"><span lang="en">Advisory Board</span><span lang="ko">자문위원</span></div>
-        <h2><span lang="en">Clinical &amp; scientific advisors.</span><span lang="ko">임상·과학 자문위원.</span></h2>
-      </div>
-      <p class="lead">
-        <span lang="en">Leading orthopedic surgeons and engineers from Korea's top institutions advise on clinical design, biomechanics, and AI-driven imaging.</span>
-        <span lang="ko">국내 최고 기관의 정형외과 전문의와 공학자들이 임상 설계, 생체역학, AI 기반 영상 분석을 자문합니다.</span>
-      </p>
-    </div>
-
-    <div class="container">
-      <h3 class="mb-m" style="color:var(--navy)"><span lang="en">Scientific Advisors</span><span lang="ko">과학 자문위원</span></h3>
-      <div class="cards cards--3" data-reveal>
-        <div class="card">
-          <div class="card__tag"><span lang="en">3D Bioprinting</span><span lang="ko">3D 바이오프린팅</span></div>
-          <h4 class="card__name" style="font-size:1.15rem"><span lang="en">Prof. Byoung-Soo Kim</span><span lang="ko">김병수 교수</span></h4>
-          <p class="card__desc"><span lang="en">Pusan National University — 3D bioprinting, tissue engineering, bioreactors</span><span lang="ko">부산대학교 — 3D 바이오프린팅, 조직공학, 바이오리액터</span></p>
-        </div>
-        <div class="card">
-          <div class="card__tag"><span lang="en">AI · Imaging</span><span lang="ko">AI · 영상</span></div>
-          <h4 class="card__name" style="font-size:1.15rem"><span lang="en">Prof. Helen Hong</span><span lang="ko">홍헬렌 교수</span></h4>
-          <p class="card__desc"><span lang="en">Seoul Women's University — deep-learning automated segmentation and image analysis</span><span lang="ko">서울여자대학교 — AI 딥러닝 기반 자동 분할 및 영상 분석</span></p>
-        </div>
-        <div class="card">
-          <div class="card__tag"><span lang="en">Biomechanics</span><span lang="ko">생체역학</span></div>
-          <h4 class="card__name" style="font-size:1.15rem"><span lang="en">Prof. Seungbum Koo</span><span lang="ko">구승범 교수</span></h4>
-          <p class="card__desc"><span lang="en">KAIST — Musculoskeletal biomechanics, 2D–3D registration</span><span lang="ko">KAIST — 근골격 운동 역학, 2D–3D 정합 기술</span></p>
-        </div>
-      </div>
-
-      <h3 class="mt-l mb-m" style="color:var(--navy)"><span lang="en">Clinical Advisors</span><span lang="ko">임상 자문위원</span></h3>
-      <div class="cards cards--3" data-reveal>
-        <div class="card">
-          <div class="card__tag"><span lang="en">Orthopedic Surgery</span><span lang="ko">정형외과</span></div>
-          <h4 class="card__name" style="font-size:1.1rem"><span lang="en">Seonghwan Kim, MD/PhD</span><span lang="ko">김성환 (MD/PhD)</span></h4>
-          <p class="card__desc"><span lang="en">Severance Hospital, Dept. of Orthopedic Surgery</span><span lang="ko">세브란스병원 정형외과</span></p>
-        </div>
-        <div class="card">
-          <div class="card__tag"><span lang="en">Orthopedic Surgery</span><span lang="ko">정형외과</span></div>
-          <h4 class="card__name" style="font-size:1.1rem"><span lang="en">Jongmin Kim, MD/PhD</span><span lang="ko">김종민 (MD/PhD)</span></h4>
-          <p class="card__desc"><span lang="en">Asan Medical Center, Seoul</span><span lang="ko">서울아산병원 정형외과</span></p>
-        </div>
-        <div class="card">
-          <div class="card__tag"><span lang="en">Orthopedic Surgery</span><span lang="ko">정형외과</span></div>
-          <h4 class="card__name" style="font-size:1.1rem"><span lang="en">Hyuksoo Han, MD/PhD</span><span lang="ko">한혁수 (MD/PhD)</span></h4>
-          <p class="card__desc"><span lang="en">Severance Hospital, Dept. of Orthopedic Surgery</span><span lang="ko">세브란스병원 정형외과</span></p>
-        </div>
-        <div class="card">
-          <div class="card__tag"><span lang="en">Orthopedic Surgery</span><span lang="ko">정형외과</span></div>
-          <h4 class="card__name" style="font-size:1.1rem"><span lang="en">Kimo Jang, MD/PhD</span><span lang="ko">장기모 (MD/PhD)</span></h4>
-          <p class="card__desc"><span lang="en">Korea University Anam Hospital</span><span lang="ko">고려대학교 안암병원 정형외과</span></p>
-        </div>
-        <div class="card">
-          <div class="card__tag"><span lang="en">Orthopedic Surgery</span><span lang="ko">정형외과</span></div>
-          <h4 class="card__name" style="font-size:1.1rem"><span lang="en">Yong In, MD/PhD</span><span lang="ko">인용 (MD/PhD)</span></h4>
-          <p class="card__desc"><span lang="en">Seoul St. Mary's Hospital</span><span lang="ko">서울성모병원 정형외과</span></p>
-        </div>
-        <div class="card">
-          <div class="card__tag"><span lang="en">Orthopedic Surgery</span><span lang="ko">정형외과</span></div>
-          <h4 class="card__name" style="font-size:1.1rem"><span lang="en">Daehee Lee, MD/PhD</span><span lang="ko">이대희 (MD/PhD)</span></h4>
-          <p class="card__desc"><span lang="en">Samsung Medical Center</span><span lang="ko">삼성서울병원 정형외과</span></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PARTNERS -->
-  <section class="section section--alt" id="partners">
-    <div class="container sec-head" data-reveal>
-      <div>
-        <div class="eyebrow"><span lang="en">Partners</span><span lang="ko">파트너쉽</span></div>
-        <h2><span lang="en">A network across development, manufacturing, and clinic.</span><span lang="ko">개발·제조·임상을 아우르는 협업 네트워크.</span></h2>
-      </div>
-      <p class="lead">
-        <span lang="en">Strategic partners across joint hospital networks, CMC/CDMO/GMP manufacturing, and academic research collaborators.</span>
-        <span lang="ko">관절 전문 병원 네트워크, CMC/CDMO/GMP 제조 파트너, 학술 협력 기관에 이르는 전략적 파트너쉽.</span>
-      </p>
-    </div>
-
-    <div class="container">
-      <div class="cards cards--3" data-reveal>
-        <div class="card">
-          <div class="card__tag"><span lang="en">Clinical Network</span><span lang="ko">병원 네트워크</span></div>
-          <h3 class="card__name" style="font-size:1.2rem"><span lang="en">Joint specialty hospitals</span><span lang="ko">관절 전문 병원</span></h3>
-          <p class="card__desc"><span lang="en">LOI-backed early-adopter hospitals and clinical feedback partners.</span><span lang="ko">구매의향서 기반 초기 채택 병원 및 임상 피드백 파트너.</span></p>
-          <ul style="padding:0; margin:0; list-style:none; font-weight:500; color:var(--ink); border-top: 1px solid var(--line); padding-top:14px;">
-            <li style="padding:6px 0;"><span lang="en">Yonsei Sarang Hospital</span><span lang="ko">연세사랑병원</span></li>
-            <li style="padding:6px 0;"><span lang="en">Bareunsesang Hospital</span><span lang="ko">바른세상병원</span></li>
-            <li style="padding:6px 0;"><span lang="en">SNU Seoul Hospital</span><span lang="ko">SNU서울병원</span></li>
-            <li style="padding:6px 0;"><span lang="en">Seoul Bareunsesang Hospital</span><span lang="ko">서울바른세상병원</span></li>
-            <li style="padding:6px 0;"><span lang="en">Ansan Ace Hospital</span><span lang="ko">안산에이스병원</span></li>
-            <li style="padding:6px 0;"><span lang="en">Heungkae Hospital</span><span lang="ko">흥케이병원</span></li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="card__tag">CMC · CDMO · GMP</div>
-          <h3 class="card__name" style="font-size:1.2rem"><span lang="en">Manufacturing &amp; preclinical</span><span lang="ko">제조·비임상</span></h3>
-          <p class="card__desc"><span lang="en">CMC process, GLP preclinical, and GMP cell-therapy contract development &amp; manufacturing partners.</span><span lang="ko">CMC 공정, GLP 비임상, GMP 세포치료제 위탁 개발·생산 파트너.</span></p>
-          <ul style="padding:0; margin:0; list-style:none; font-weight:500; color:var(--ink); border-top: 1px solid var(--line); padding-top:14px;">
-            <li style="padding:6px 0;"><span lang="en">HLB Biocode</span><span lang="ko">HLB바이오코드</span></li>
-            <li style="padding:6px 0;">Biotoxtech</li>
-            <li style="padding:6px 0;"><span lang="en">Matica Biolabs</span><span lang="ko">마티카바이오랩스</span></li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="card__tag"><span lang="en">Tech &amp; Academia</span><span lang="ko">기술·학술</span></div>
-          <h3 class="card__name" style="font-size:1.2rem"><span lang="en">Process &amp; platform development</span><span lang="ko">공정·플랫폼 개발</span></h3>
-          <p class="card__desc"><span lang="en">Co-development on AI customization, 3D printing, decellularization, and imaging.</span><span lang="ko">AI 맞춤·3D 프린팅·탈세포화·영상 분석 공동 개발 파트너.</span></p>
-          <ul style="padding:0; margin:0; list-style:none; font-weight:500; color:var(--ink); border-top: 1px solid var(--line); padding-top:14px;">
-            <li style="padding:6px 0;">T&amp;R Biofab</li>
-            <li style="padding:6px 0;">ORTHOTECH</li>
-            <li style="padding:6px 0;"><span lang="en">Seoul Women's University</span><span lang="ko">서울여자대학교</span></li>
-            <li style="padding:6px 0;"><span lang="en">Pusan National University</span><span lang="ko">부산대학교</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GROWTH ROADMAP -->
   <section class="section" id="history">
     <div class="container sec-head" data-reveal>
       <div>
-        <div class="eyebrow"><span lang="en">Growth Roadmap</span><span lang="ko">성장 로드맵</span></div>
-        <h2><span lang="en">From spin-out to scale.</span><span lang="ko">스핀오프에서 스케일업까지.</span></h2>
+        <div class="eyebrow"><span lang="en">History</span><span lang="ko">연혁</span></div>
+        <h2><span lang="en">A <span class="grad">regenerative joint medicine company</span> born from clinical and research experience at Samsung Medical Center.</span><span lang="ko">삼성서울병원 정형외과의 임상·연구 경험에서 출발한 <span class="grad">관절 재생의학 기업.</span></span></h2>
       </div>
-      <p class="lead">
-        <span lang="en">A staged plan moving from foundational technology acquisition through commercialization to global expansion.</span>
-        <span lang="ko">원천기술 확보 → 사업 기반 구축 → 상용화 → 글로벌 확장으로 이어지는 단계별 로드맵.</span>
-      </p>
     </div>
-
-    <div class="container" style="max-width: 900px;">
+    <div class="container">
       <div class="timeline" data-reveal>
-        <div class="timeline__item">
-          <div class="timeline__year">2024</div>
-          <div class="timeline__title"><span lang="en">Founding preparation</span><span lang="ko">창업 준비</span></div>
-          <p><span lang="en">National R&amp;D grant execution, foundational technology acquisition, business plan development, and partnership formation.</span><span lang="ko">국가 과제 진행, 원천 기술 확보, 사업 계획 구체화, 협력 기관 확보.</span></p>
-        </div>
         <div class="timeline__item">
           <div class="timeline__year">2025</div>
           <div class="timeline__title"><span lang="en">Incorporation</span><span lang="ko">법인 설립</span></div>
-          <p><span lang="en">Technology maturation · 2 patent applications · Start-up NEST 18th cohort (KODIT) · SKKU SVC Forum · corporate R&amp;D center established.</span><span lang="ko">원천 기술 고도화 · 특허 출원 2건 · 신용보증기금 Start-up NEST 18기 선정 · 성균관대 SVC 포럼 선정 · 기업부설연구소 설립.</span></p>
+          <ul>
+            <li><span lang="en"><strong>Mar</strong>ArthRegen Inc. founded — a joint regenerative medicine spin-off biotech venture built on clinical and research experience from the Department of Orthopedic Surgery at Samsung Medical Center</span><span lang="ko"><strong>3월</strong>㈜아스리젠 설립 — 삼성서울병원 정형외과의 임상·연구 경험을 기반으로 출발한 관절 재생의학 스핀오프 바이오벤처</span></li>
+            <li><span lang="en"><strong>Jun</strong>Selected for the Startup-Leading University Program — laboratory-specialized startup track</span><span lang="ko"><strong>6월</strong>창업중심대학 사업 선정 — 실험실 특화형 창업 선도 대학 사업 선정</span></li>
+            <li><span lang="en"><strong>Jul</strong>Porous 3D meniscus scaffold and biodegradable medical device incorporating it (patent technology transfer: KR 10-2023-0151068)</span><span lang="ko"><strong>7월</strong>다공성의 3차원 반월연골판 스캐폴드 및 그를 포함하는 생분해성 의료기기 (특허기술 이전: KR 10-2023-0151068)</span></li>
+            <li><span lang="en"><strong>Aug</strong>Selected for KODIT Start-up NEST 18th cohort</span><span lang="ko"><strong>8월</strong>신용보증기금 Start-up NEST 18기 선정</span></li>
+            <li><span lang="en"><strong>Sep</strong>Issued KIBO technology guarantee certificate</span><span lang="ko"><strong>9월</strong>기술보증기금 기술보증서 발급</span></li>
+            <li><span lang="en"><strong>Oct</strong>Selected as a KIBO U-tech Valley company</span><span lang="ko"><strong>10월</strong>기술보증기금 U-tech 밸리 기업 선정</span></li>
+            <li><span lang="en"><strong>Dec</strong>Corporate R&amp;D center established — Patient-specific implant 3D structure prediction device and method (patent technology transfer: KR 10-2023-0018220)</span><span lang="ko"><strong>12월</strong>기업부설연구소 설립 — 환자 맞춤형 이식체 3차구조 예측 장치 및 방법 (특허기술 이전: KR 10-2023-0018220)</span></li>
+          </ul>
         </div>
         <div class="timeline__item">
-          <div class="timeline__year">2026 – 2027</div>
-          <div class="timeline__title"><span lang="en">Business foundation</span><span lang="ko">사업 기반 확보</span></div>
-          <p><span lang="en">Seed + TIPS R&amp;D + Pre-Series A funding · GLP preclinical for Carti-All · MeniFul market launch · medical-device GMP buildout.</span><span lang="ko">Seed·TIPS R&amp;D·Pre-Series A 조달 · Carti-All GLP 비임상 · MeniFul 출시 · 의료기기 GMP 설립.</span></p>
-        </div>
-        <div class="timeline__item">
-          <div class="timeline__year">2028</div>
-          <div class="timeline__title"><span lang="en">Commercialization</span><span lang="ko">사업화</span></div>
-          <p><span lang="en">Series A · MeniSave entering clinical trials · Carti-All advancing to Phase 2b/3 · first commercial revenue recognized.</span><span lang="ko">Series A · MeniSave 임상 진입 · Carti-All 임상 2b/3상 · 첫 매출 발생.</span></p>
-        </div>
-        <div class="timeline__item">
-          <div class="timeline__year">2029 +</div>
-          <div class="timeline__title"><span lang="en">Scale &amp; global</span><span lang="ko">스케일업 · 글로벌</span></div>
-          <p><span lang="en">Strategic investment · IPO preparation · international partnerships · MeniSave commercial launch · Carti-All conditional approval &amp; sales · full-scale GMP buildout.</span><span lang="ko">SI 투자 · IPO 준비 · 해외 파트너쉽 체결 · MeniSave 허가·판매 개시 · Carti-All 조건부 판매 · GMP 생산설비 구축.</span></p>
+          <div class="timeline__year">2026</div>
+          <div class="timeline__title"><span lang="en">Pipeline acceleration</span><span lang="ko">파이프라인 개발 본격화</span></div>
+          <ul>
+            <li><span lang="en"><strong>Jan</strong>MOU signed with Seoul Women's University</span><span lang="ko"><strong>1월</strong>서울여대 MOU 체결</span></li>
+            <li><span lang="en"><strong>Feb</strong>MOU signed with T&amp;R Biofab</span><span lang="ko"><strong>2월</strong>T&amp;R Biofab MOU 체결</span></li>
+            <li><span lang="en"><strong>Mar</strong>Venture company certification / MOU signed with ORTHOTECH</span><span lang="ko"><strong>3월</strong>벤처기업 인증 / ORTHOTECH MOU 체결</span></li>
+            <li><span lang="en"><strong>Apr</strong>Joined Korea Bio Association as a full member</span><span lang="ko"><strong>4월</strong>한국바이오협회 정회원 가입</span></li>
+            <li><span lang="en"><strong>May</strong>Selected for the Startup-Leading University linked program</span><span lang="ko"><strong>5월</strong>창업중심대학 연계 사업 선정</span></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -433,30 +239,32 @@
       <div class="site-footer__grid">
         <div class="site-footer__brand">
           <img src="assets/img/logo-white.svg" alt="ArthRegen" class="site-footer__brand-img" />
-          <p><span lang="en">ArthRegen Co., Ltd. — surgeon-designed, precision-engineered, bio-native regenerative medicine for damaged joints.</span><span lang="ko">주식회사 아스리젠 — 외과 의사가 설계하고, 환자별로 정밀 설계되며, 인체 본연의 소재로 만들어진 관절 재생의학.</span></p>
+          <p><span lang="en">ArthRegen Co., Ltd. — regenerative joint medicine born from a surgeon's clinical insight.</span><span lang="ko">주식회사 아스리젠 — 외과의사의 임상적 통찰에서 시작한 관절 재생의학.</span></p>
         </div>
-        <div><h4><span lang="en">Company</span><span lang="ko">회사</span></h4>
+        <div>
+          <h4><span lang="en">Company</span><span lang="ko">회사</span></h4>
           <ul>
             <li><a href="about.html"><span lang="en">About</span><span lang="ko">회사 소개</span></a></li>
-            <li><a href="about.html#team"><span lang="en">Leadership</span><span lang="ko">경영진</span></a></li>
-            <li class="has-dropdown"><a href="news.html" aria-haspopup="true" aria-expanded="false"><span lang="en">News</span><span lang="ko">뉴스</span><span class="dropdown-caret" aria-hidden="true">▾</span></a><ul class="site-nav__dropdown" aria-label="News sections"><li><a href="news.html#press"><span lang="en">Press coverage</span><span lang="ko">언론보도</span></a></li><li><a href="news.html#media"><span lang="en">Media</span><span lang="ko">미디어</span></a></li><li><a href="news.html#notices"><span lang="en">Announcements</span><span lang="ko">공지사항</span></a></li></ul></li>
-            <li><a href="contact.html"><span lang="en">Contact</span><span lang="ko">문의</span></a></li>
+            <li class="has-dropdown"><a href="news.html" aria-haspopup="true" aria-expanded="false"><span lang="en">News</span><span lang="ko">뉴스</span><span class="dropdown-caret" aria-hidden="true">▾</span></a><ul class="site-nav__dropdown" aria-label="News sections"><li><a href="news.html#announcements"><span lang="en">Announcements</span><span lang="ko">공지사항</span></a></li><li><a href="news.html#press"><span lang="en">Press coverage</span><span lang="ko">언론보도</span></a></li><li><a href="news.html#media"><span lang="en">Media</span><span lang="ko">미디어</span></a></li></ul></li>
+            <li><a href="investors.html#contact"><span lang="en">Contact</span><span lang="ko">문의</span></a></li>
           </ul>
         </div>
-        <div><h4><span lang="en">Platform</span><span lang="ko">플랫폼</span></h4>
+        <div>
+          <h4><span lang="en">Platform</span><span lang="ko">플랫폼</span></h4>
           <ul>
-            <li><a href="pipeline.html"><span lang="en">Pipeline overview</span><span lang="ko">파이프라인 개요</span></a></li>
-            <li><a href="pipeline.html#carti-all">Carti-All</a></li>
-            <li><a href="pipeline.html#menisave">MeniSave</a></li>
-            <li><a href="pipeline.html#meniful">MeniFul</a></li>
+            <li><a href="rd.html"><span lang="en">R&amp;D overview</span><span lang="ko">R&amp;D 개요</span></a></li>
+            <li><a href="rd.html#ar-001">AR-001</a></li>
+            <li><a href="rd.html#ar-002">AR-002</a></li>
+            <li><a href="rd.html#ar-003">AR-003</a></li>
           </ul>
         </div>
-        <div><h4><span lang="en">Investors</span><span lang="ko">투자자</span></h4>
+        <div>
+          <h4><span lang="en">Investors</span><span lang="ko">투자자</span></h4>
           <ul>
             <li><a href="investors.html"><span lang="en">Overview</span><span lang="ko">개요</span></a></li>
-            <li><a href="investors.html#market"><span lang="en">Market</span><span lang="ko">시장</span></a></li>
             <li><a href="investors.html#why"><span lang="en">Why ArthRegen</span><span lang="ko">투자 포인트</span></a></li>
-            <li><a href="contact.html"><span lang="en">IR contact</span><span lang="ko">IR 문의</span></a></li>
+            <li><a href="investors.html#contact"><span lang="en">Contact</span><span lang="ko">문의</span></a></li>
+            <li><a href="investors.html#contact"><span lang="en">IR contact</span><span lang="ko">IR 문의</span></a></li>
           </ul>
         </div>
       </div>

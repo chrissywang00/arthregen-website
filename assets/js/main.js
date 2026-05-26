@@ -349,4 +349,13 @@
       form.reset();
     });
   }
+
+  /* ---------- Hero video — slow-motion playback ---------- */
+  var heroVideo = document.querySelector('.hero__video');
+  if (heroVideo) {
+    var setRate = function () { heroVideo.playbackRate = 0.55; };
+    setRate();
+    heroVideo.addEventListener('loadedmetadata', setRate);
+    heroVideo.addEventListener('play', setRate);
+  }
 })();

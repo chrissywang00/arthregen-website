@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>News · ArthRegen</title>
-  <meta name="description" content="ArthRegen press coverage, media appearances, and announcements." />
+  <meta name="description" content="ArthRegen announcements, press coverage, and media appearances — company milestones, partnerships, and joint-health information." />
   <meta name="theme-color" content="#1E3A8A" />
   <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,14 +19,19 @@
       <a href="index.html" class="site-nav__logo" aria-label="ArthRegen home">
         <img src="assets/img/logo.svg" alt="ArthRegen" />
       </a>
-      <nav aria-label="Primary">
+            <nav aria-label="Primary">
         <ul class="site-nav__links">
           <li><a href="index.html"><span lang="en">Home</span><span lang="ko">홈</span></a></li>
           <li><a href="about.html"><span lang="en">About</span><span lang="ko">회사 소개</span></a></li>
-          <li><a href="pipeline.html"><span lang="en">Pipeline</span><span lang="ko">파이프라인</span></a></li>
+          <li><a href="rd.html"><span lang="en">R&D</span><span lang="ko">R&D</span></a></li>
+          <li class="has-dropdown"><a href="news.html" class="is-active" aria-haspopup="true" aria-expanded="false"><span lang="en">News</span><span lang="ko">뉴스</span><span class="dropdown-caret" aria-hidden="true">▾</span></a>
+            <ul class="site-nav__dropdown" aria-label="News sections">
+              <li><a href="news.html#announcements"><span lang="en">Announcements</span><span lang="ko">공지사항</span></a></li>
+              <li><a href="news.html#press"><span lang="en">Press coverage</span><span lang="ko">언론보도</span></a></li>
+              <li><a href="news.html#media"><span lang="en">Media</span><span lang="ko">미디어</span></a></li>
+            </ul>
+          </li>
           <li><a href="investors.html"><span lang="en">Investors</span><span lang="ko">투자정보</span></a></li>
-          <li class="has-dropdown"><a href="news.html" class="is-active" aria-haspopup="true" aria-expanded="false"><span lang="en">News</span><span lang="ko">뉴스</span><span class="dropdown-caret" aria-hidden="true">▾</span></a><ul class="site-nav__dropdown" aria-label="News sections"><li><a href="news.html#press"><span lang="en">Press coverage</span><span lang="ko">언론보도</span></a></li><li><a href="news.html#media"><span lang="en">Media</span><span lang="ko">미디어</span></a></li><li><a href="news.html#notices"><span lang="en">Announcements</span><span lang="ko">공지사항</span></a></li></ul></li>
-          <li><a href="contact.html"><span lang="en">Contact</span><span lang="ko">문의</span></a></li>
         </ul>
       </nav>
       <div class="site-nav__right">
@@ -43,20 +48,61 @@
 
   <section class="page-hero">
     <div class="container" data-reveal>
-      <div class="eyebrow"><span lang="en">News &amp; Press</span><span lang="ko">뉴스 · 공지</span></div>
-      <h1><span lang="en">Coverage, conversations, announcements.</span><span lang="ko">언론보도, 미디어, 공지사항.</span></h1>
-      <p><span lang="en">Press coverage of ArthRegen's partnerships and platform; media appearances by Dr. Joon Ho Wang on knee health; and announcements of conferences, MOUs, and presentations.</span><span lang="ko">아스리젠의 파트너쉽과 플랫폼에 대한 언론 보도, 왕준호 대표의 무릎 건강 관련 미디어 출연, 그리고 학회·업무협약·발표 공지사항.</span></p>
+      <div class="eyebrow"><span lang="en">News</span><span lang="ko">뉴스</span></div>
+      <h1><span lang="en">News.</span><span lang="ko">뉴스.</span></h1>
+      <p><span lang="en">Company announcements and milestones, press coverage of ArthRegen's partnerships and platform, and media appearances by Dr. Joon Ho Wang on knee health.</span><span lang="ko">회사 공지사항과 마일스톤, 아스리젠의 파트너쉽과 플랫폼에 대한 언론 보도, 왕준호 대표의 무릎 건강 관련 미디어 출연 소식.</span></p>
     </div>
   </section>
 
-  <!-- 1. PRESS -->
-  <section class="section" id="press">
+  <!-- 1. ANNOUNCEMENTS -->
+  <section class="section" id="announcements">
     <div class="container sec-head" data-reveal>
       <div>
-        <div class="eyebrow"><span lang="en">1 · Press coverage</span><span lang="ko">1 · 언론보도</span></div>
+        <div class="eyebrow"><span lang="en">1 · Announcements</span><span lang="ko">1 · 공지사항</span></div>
+        <h2><span lang="en">Announcements.</span><span lang="ko">공지사항.</span></h2>
+      </div>
+      <p class="lead"><span lang="en">Company milestones, partnerships, and events — click any title to view the full announcement.</span><span lang="ko">회사 마일스톤, 파트너십, 행사 소식 — 제목을 누르시면 상세 페이지로 이어집니다.</span></p>
+    </div>
+
+    <div class="container">
+      <div class="press-list" data-reveal>
+        <a class="press-list__item" href="announcements/tnr-biofab-mou-2026-02-13.html">
+          <span class="press-list__source">2026 · 02 · 13</span>
+          <span class="press-list__title"><span lang="en">MOU signed with T&amp;R Biofab</span><span lang="ko">티앤알바이오팹 MOU 체결</span></span>
+          <span class="press-list__cta"><span lang="en">View →</span><span lang="ko">자세히 보기 →</span></span>
+        </a>
+        <a class="press-list__item" href="announcements/swu-mou-2026-01-30.html">
+          <span class="press-list__source">2026 · 01 · 30</span>
+          <span class="press-list__title"><span lang="en">MOU signed with Seoul Women's University</span><span lang="ko">서울여자대학교 MOU 체결</span></span>
+          <span class="press-list__cta"><span lang="en">View →</span><span lang="ko">자세히 보기 →</span></span>
+        </a>
+        <a class="press-list__item" href="announcements/3d-print-symposium-2025-12-18.html">
+          <span class="press-list__source">2025 · 12 · 18</span>
+          <span class="press-list__title"><span lang="en">Korean 3D-Printing Medical Convergence Autumn Joint Symposium — invited presentation</span><span lang="ko">대한 3D프린팅 의료융합 추계 공동 심포지엄 발표</span></span>
+          <span class="press-list__cta"><span lang="en">View →</span><span lang="ko">자세히 보기 →</span></span>
+        </a>
+        <a class="press-list__item" href="announcements/meniscus-asia-summit-2025-12-06.html">
+          <span class="press-list__source">2025 · 12 · 06</span>
+          <span class="press-list__title"><span lang="en">The Meniscus Asia Summit 2025 — invited presentation</span><span lang="ko">The Meniscus Asia Summit 2025 발표</span></span>
+          <span class="press-list__cta"><span lang="en">View →</span><span lang="ko">자세히 보기 →</span></span>
+        </a>
+        <a class="press-list__item" href="announcements/koa-2025-10-16.html">
+          <span class="press-list__source">2025 · 10 · 16</span>
+          <span class="press-list__title"><span lang="en">Korean Orthopaedic Association · 69th Autumn Congress — exhibition booth</span><span lang="ko">대한정형외과학회 제 69차 추계학술대회 전시 부스 참여</span></span>
+          <span class="press-list__cta"><span lang="en">View →</span><span lang="ko">자세히 보기 →</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PRESS -->
+  <section class="section section--alt" id="press">
+    <div class="container sec-head" data-reveal>
+      <div>
+        <div class="eyebrow"><span lang="en">2 · Press coverage</span><span lang="ko">2 · 언론보도</span></div>
         <h2><span lang="en">In the press.</span><span lang="ko">언론보도.</span></h2>
       </div>
-      <p class="lead"><span lang="en">Click any title to read the full article.</span><span lang="ko">제목을 누르시면 링크로 이어집니다.</span></p>
+      <p class="lead" style="text-align:left;"><span lang="en">Click any title to read the full article.</span><span lang="ko">제목을 누르시면 링크로 이어집니다.</span></p>
     </div>
 
     <div class="container">
@@ -110,14 +156,14 @@
     </div>
   </section>
 
-  <!-- 2. MEDIA -->
-  <section class="section section--alt" id="media">
+  <!-- 3. MEDIA -->
+  <section class="section" id="media">
     <div class="container sec-head" data-reveal>
       <div>
-        <div class="eyebrow"><span lang="en">2 · Media</span><span lang="ko">2 · 미디어</span></div>
-        <h2><span lang="en"><span class="grad">CEO</span> media appearances.</span><span lang="ko"><span class="grad">CEO</span> 미디어 출연.</span></h2>
+        <div class="eyebrow"><span lang="en">3 · Media</span><span lang="ko">3 · 미디어</span></div>
+        <h2><span lang="en">Joint health information delivered by a specialist.</span><span lang="ko">전문의가 전하는 관절 건강 정보.</span></h2>
       </div>
-      <p class="lead"><span lang="en">Dr. Joon Ho Wang on Korean broadcast TV — explaining knee health, osteoarthritis, and meniscus injury to a general audience.</span><span lang="ko">왕준호 대표의 방송 출연 — 무릎 건강, 퇴행성 관절염, 반월연골판 파열 등을 시청자에게 설명합니다.</span></p>
+      <p class="lead"><span lang="en">Through broadcast and media, Dr. Joon-Ho Wang shares accurate medical information on joint conditions — including knee health, osteoarthritis, and meniscus injury.</span><span lang="ko">왕준호 대표는 방송과 미디어를 통해 무릎 건강, 퇴행성 관절염, 반월연골판 손상 등 관절 질환에 대한 올바른 의학 정보를 전달하고 있습니다.</span></p>
     </div>
 
     <div class="container">
@@ -210,82 +256,6 @@
     </div>
   </section>
 
-  <!-- 3. NOTICES -->
-  <section class="section" id="notices">
-    <div class="container sec-head" data-reveal>
-      <div>
-        <div class="eyebrow"><span lang="en">3 · Announcements</span><span lang="ko">3 · 공지사항</span></div>
-        <h2><span lang="en">Conferences, MOUs, presentations.</span><span lang="ko">학회·업무협약·발표.</span></h2>
-      </div>
-      <p class="lead"><span lang="en">Recent ArthRegen conference appearances and partnership announcements.</span><span lang="ko">최근 학회 참여 및 협약 체결 소식.</span></p>
-    </div>
-
-    <div class="container">
-      <div class="notice-list" data-reveal>
-
-        <a class="notice" href="announcements/koa-2025-10-16.html">
-          <div class="notice__body">
-            <div class="notice__date">2025-10-16</div>
-            <h3 class="notice__title"><span lang="en">Korean Orthopaedic Association · 69th Autumn Congress — exhibition booth</span><span lang="ko">대한정형외과학회 제 69차 추계학술대회 전시 부스 참여</span></h3>
-            <span class="notice__cta"><span lang="en">Read more</span><span lang="ko">자세히 보기</span> <span class="arrow">→</span></span>
-          </div>
-          <div class="notice__media notice__media--triple">
-            <img src="assets/img/news/event1-a.jpg" alt="" loading="lazy" />
-            <img src="assets/img/news/event1-b.jpg" alt="" loading="lazy" />
-            <img src="assets/img/news/event1-c.png" alt="" loading="lazy" />
-          </div>
-        </a>
-
-        <a class="notice" href="announcements/meniscus-asia-summit-2025-12-06.html">
-          <div class="notice__body">
-            <div class="notice__date">2025-12-06</div>
-            <h3 class="notice__title"><span lang="en">The Meniscus Asia Summit 2025 — invited presentation</span><span lang="ko">The Meniscus Asia Summit 2025 발표</span></h3>
-            <span class="notice__cta"><span lang="en">Read more</span><span lang="ko">자세히 보기</span> <span class="arrow">→</span></span>
-          </div>
-          <div class="notice__media">
-            <img src="assets/img/news/event2-a.png" alt="" loading="lazy" />
-            <img src="assets/img/news/event2-b.jpg" alt="" loading="lazy" />
-          </div>
-        </a>
-
-        <a class="notice" href="announcements/3d-print-symposium-2025-12-18.html">
-          <div class="notice__body">
-            <div class="notice__date">2025-12-18</div>
-            <h3 class="notice__title"><span lang="en">Korean 3D-Printing Medical Convergence Autumn Joint Symposium — presentation</span><span lang="ko">대한 3D프린팅 의료융합 추계 공동 심포지엄 발표</span></h3>
-            <span class="notice__cta"><span lang="en">Read more</span><span lang="ko">자세히 보기</span> <span class="arrow">→</span></span>
-          </div>
-          <div class="notice__media">
-            <img src="assets/img/news/event3-a.png" alt="" loading="lazy" />
-            <img src="assets/img/news/event3-b.png" alt="" loading="lazy" />
-          </div>
-        </a>
-
-        <a class="notice" href="announcements/swu-mou-2026-01-30.html">
-          <div class="notice__body">
-            <div class="notice__date">2026-01-30</div>
-            <h3 class="notice__title"><span lang="en">MOU signed with Seoul Women's University</span><span lang="ko">서울여자대학교 MOU 체결</span></h3>
-            <span class="notice__cta"><span lang="en">Read more</span><span lang="ko">자세히 보기</span> <span class="arrow">→</span></span>
-          </div>
-          <div class="notice__media notice__media--single">
-            <img src="assets/img/news/event4.jpg" alt="" loading="lazy" />
-          </div>
-        </a>
-
-        <a class="notice" href="announcements/tnr-biofab-mou-2026-02-13.html">
-          <div class="notice__body">
-            <div class="notice__date">2026-02-13</div>
-            <h3 class="notice__title"><span lang="en">MOU signed with T&amp;R Biofab</span><span lang="ko">티앤알바이오팹 MOU 체결</span></h3>
-            <span class="notice__cta"><span lang="en">Read more</span><span lang="ko">자세히 보기</span> <span class="arrow">→</span></span>
-          </div>
-          <div class="notice__media notice__media--single">
-            <img src="assets/img/news/event5.jpg" alt="" loading="lazy" />
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
   </main>
 
   <footer class="site-footer">
@@ -293,30 +263,29 @@
       <div class="site-footer__grid">
         <div class="site-footer__brand">
           <img src="assets/img/logo-white.svg" alt="ArthRegen" class="site-footer__brand-img" />
-          <p><span lang="en">ArthRegen Co., Ltd. — surgeon-designed, precision-engineered, bio-native regenerative medicine for damaged joints.</span><span lang="ko">주식회사 아스리젠 — 외과 의사가 설계하고, 환자별로 정밀 설계되며, 인체 본연의 소재로 만들어진 관절 재생의학.</span></p>
+          <p><span lang="en">ArthRegen Co., Ltd. — regenerative joint medicine born from a surgeon's clinical insight.</span><span lang="ko">주식회사 아스리젠 — 외과의사의 임상적 통찰에서 시작한 관절 재생의학.</span></p>
         </div>
         <div><h4><span lang="en">Company</span><span lang="ko">회사</span></h4>
           <ul>
             <li><a href="about.html"><span lang="en">About</span><span lang="ko">회사 소개</span></a></li>
-            <li><a href="about.html#team"><span lang="en">Leadership</span><span lang="ko">경영진</span></a></li>
-            <li class="has-dropdown"><a href="news.html" aria-haspopup="true" aria-expanded="false"><span lang="en">News</span><span lang="ko">뉴스</span><span class="dropdown-caret" aria-hidden="true">▾</span></a><ul class="site-nav__dropdown" aria-label="News sections"><li><a href="news.html#press"><span lang="en">Press coverage</span><span lang="ko">언론보도</span></a></li><li><a href="news.html#media"><span lang="en">Media</span><span lang="ko">미디어</span></a></li><li><a href="news.html#notices"><span lang="en">Announcements</span><span lang="ko">공지사항</span></a></li></ul></li>
-            <li><a href="contact.html"><span lang="en">Contact</span><span lang="ko">문의</span></a></li>
+            <li class="has-dropdown"><a href="news.html" aria-haspopup="true" aria-expanded="false"><span lang="en">News</span><span lang="ko">뉴스</span><span class="dropdown-caret" aria-hidden="true">▾</span></a><ul class="site-nav__dropdown" aria-label="News sections"><li><a href="news.html#announcements"><span lang="en">Announcements</span><span lang="ko">공지사항</span></a></li><li><a href="news.html#press"><span lang="en">Press coverage</span><span lang="ko">언론보도</span></a></li><li><a href="news.html#media"><span lang="en">Media</span><span lang="ko">미디어</span></a></li></ul></li>
+            <li><a href="investors.html#contact"><span lang="en">Contact</span><span lang="ko">문의</span></a></li>
           </ul>
         </div>
         <div><h4><span lang="en">Platform</span><span lang="ko">플랫폼</span></h4>
           <ul>
-            <li><a href="pipeline.html"><span lang="en">Pipeline overview</span><span lang="ko">파이프라인 개요</span></a></li>
-            <li><a href="pipeline.html#carti-all">Carti-All</a></li>
-            <li><a href="pipeline.html#menisave">MeniSave</a></li>
-            <li><a href="pipeline.html#meniful">MeniFul</a></li>
+            <li><a href="rd.html"><span lang="en">R&amp;D overview</span><span lang="ko">R&amp;D 개요</span></a></li>
+            <li><a href="rd.html#ar-001">AR-001</a></li>
+            <li><a href="rd.html#ar-002">AR-002</a></li>
+            <li><a href="rd.html#ar-003">AR-003</a></li>
           </ul>
         </div>
         <div><h4><span lang="en">Investors</span><span lang="ko">투자자</span></h4>
           <ul>
             <li><a href="investors.html"><span lang="en">Overview</span><span lang="ko">개요</span></a></li>
-            <li><a href="investors.html#market"><span lang="en">Market</span><span lang="ko">시장</span></a></li>
             <li><a href="investors.html#why"><span lang="en">Why ArthRegen</span><span lang="ko">투자 포인트</span></a></li>
-            <li><a href="contact.html"><span lang="en">IR contact</span><span lang="ko">IR 문의</span></a></li>
+            <li><a href="investors.html#contact"><span lang="en">Contact</span><span lang="ko">문의</span></a></li>
+            <li><a href="investors.html#contact"><span lang="en">IR contact</span><span lang="ko">IR 문의</span></a></li>
           </ul>
         </div>
       </div>
