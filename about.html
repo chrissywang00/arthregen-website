@@ -9,7 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Pretendard+Variable&family=Gowun+Dodum&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Pretendard+Variable&family=Gowun+Dodum&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.typekit.net/jih5vxr.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
@@ -23,7 +23,12 @@
             <nav aria-label="Primary">
         <ul class="site-nav__links">
           <li><a href="index.html"><span lang="en">Home</span><span lang="ko">홈</span></a></li>
-          <li><a href="about.html" class="is-active"><span lang="en">About</span><span lang="ko">회사 소개</span></a></li>
+          <li class="has-dropdown"><a href="about.html" class="is-active" aria-haspopup="true" aria-expanded="false"><span lang="en">About</span><span lang="ko">회사 소개</span><span class="dropdown-caret" aria-hidden="true">▾</span></a>
+            <ul class="site-nav__dropdown" aria-label="About sections">
+              <li><a href="about.html" class="is-active"><span lang="en">Company</span><span lang="ko">회사</span></a></li>
+              <li><a href="founder.html"><span lang="en">Founder</span><span lang="ko">창립자</span></a></li>
+            </ul>
+          </li>
           <li><a href="rd.html"><span lang="en">R&D</span><span lang="ko">R&D</span></a></li>
           <li class="has-dropdown"><a href="news.html" aria-haspopup="true" aria-expanded="false"><span lang="en">News</span><span lang="ko">뉴스</span><span class="dropdown-caret" aria-hidden="true">▾</span></a>
             <ul class="site-nav__dropdown" aria-label="News sections">
@@ -66,10 +71,10 @@
     <div class="container sec-head" data-reveal>
       <div>
         <div class="eyebrow"><span lang="en">CEO Greeting</span><span lang="ko">창업자의 인사말</span></div>
-        <h2><span lang="en"><span class="grad">Founder's</span> message.</span><span lang="ko"><span class="grad">창업자</span> 인사말.</span></h2>
+        <h2><span lang="en"><span class="grad">Founder's</span><br class="ceo-h2-break-mobile" /> message.</span><span lang="ko"><span class="grad">창업자</span> 인사말.</span></h2>
       </div>
       <p class="lead">
-        <span lang="en">Beyond the limits of the operating room —<br/>building joint regeneration solutions that reach more patients.</span>
+        <span lang="en">Beyond the limits of the operating room —<br class="lead-break-desktop" /> building joint regeneration solutions that reach more patients.</span>
         <span lang="ko">임상 현장의 한계를 넘어, 더 많은 환자에게 닿는 관절 재생 솔루션을 만들겠습니다.</span>
       </p>
     </div>
@@ -101,6 +106,10 @@
             <span lang="ko">주식회사 아스리젠 대표이사</span>
             <strong><span lang="en">Joon Ho Wang</span><span lang="ko">왕준호</span></strong>
           </div>
+          <a href="founder.html" class="card__link ceo-greeting__profile-link">
+            <span lang="en">View Founder Profile</span><span lang="ko">창립자 프로필 보기</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </div>
@@ -244,7 +253,7 @@
         <div>
           <h4><span lang="en">Company</span><span lang="ko">회사</span></h4>
           <ul>
-            <li><a href="about.html"><span lang="en">About</span><span lang="ko">회사 소개</span></a></li>
+            <li><a href="about.html"><span lang="en">About</span><span lang="ko">회사 소개</span><span class="dropdown-caret" aria-hidden="true">▾</span></a></li>
             <li class="has-dropdown"><a href="news.html" aria-haspopup="true" aria-expanded="false"><span lang="en">News</span><span lang="ko">뉴스</span><span class="dropdown-caret" aria-hidden="true">▾</span></a><ul class="site-nav__dropdown" aria-label="News sections"><li><a href="news.html#announcements"><span lang="en">Announcements</span><span lang="ko">공지사항</span></a></li><li><a href="news.html#press"><span lang="en">Press coverage</span><span lang="ko">언론보도</span></a></li><li><a href="news.html#media"><span lang="en">Media</span><span lang="ko">미디어</span></a></li></ul></li>
             <li><a href="investors.html#contact"><span lang="en">Contact</span><span lang="ko">문의</span></a></li>
           </ul>
@@ -268,8 +277,17 @@
           </ul>
         </div>
       </div>
+      <nav class="site-footer__mobile-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html"><span lang="en">Home</span><span lang="ko">홈</span></a></li>
+          <li><a href="about.html"><span lang="en">About</span><span lang="ko">회사 소개</span><span class="dropdown-caret" aria-hidden="true">▾</span></a></li>
+          <li><a href="rd.html"><span lang="en">R&amp;D</span><span lang="ko">R&amp;D</span></a></li>
+          <li><a href="news.html"><span lang="en">News</span><span lang="ko">뉴스</span><span class="dropdown-caret" aria-hidden="true">▾</span></a></li>
+          <li><a href="investors.html"><span lang="en">Investors</span><span lang="ko">투자정보</span></a></li>
+        </ul>
+      </nav>
       <div class="site-footer__bottom">
-        <div>&copy; <span data-year>2026</span> ArthRegen Co., Ltd. <span lang="en">All rights reserved.</span><span lang="ko">모든 권리 보유.</span></div>
+        <div>&copy; <span data-year>2026</span> ArthRegen Co., Ltd. <span class="site-footer__rights"><span lang="en">All rights reserved.</span><span lang="ko">모든 권리 보유.</span></span></div>
         <div><span lang="en">Seoul, Republic of Korea</span><span lang="ko">대한민국 서울</span></div>
       </div>
     </div>
