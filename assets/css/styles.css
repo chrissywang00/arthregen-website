@@ -137,6 +137,12 @@ main { flex: 1 0 auto; display: block; }
    the body and inflating scrollHeight, creating dead space below the footer. */
 .site-footer .site-nav__dropdown,
 .site-footer .dropdown-caret { display: none; }
+/* Hide the News dropdown (and its caret) in the mobile nav — only News
+   should appear as a single link, not a parent with sub-items. */
+@media (max-width: 960px) {
+  .site-nav__links .has-dropdown .site-nav__dropdown { display: none; }
+  .site-nav__links .has-dropdown .dropdown-caret { display: none; }
+}
 a { color: var(--navy); text-decoration: none; transition: color .2s var(--ease); }
 a:hover { color: var(--teal-600); }
 :focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 4px; }
@@ -1827,6 +1833,25 @@ a.notice:hover .notice__cta .arrow { transform: translateX(4px); }
   .site-footer__grid { grid-template-columns: 1fr 1fr; gap: 40px; }
   .site-footer__brand { grid-column: 1 / -1; }
 }
+/* Compact mobile footer — brand full-width on top, then 3 menu groups in
+   a 2-column grid (회사 + 플랫폼 on row 1, 투자자 on row 2). Tighter
+   spacing throughout. */
+@media (max-width: 720px) {
+  .site-footer { padding: 40px 0 12px; }
+  .site-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 28px;
+    padding-bottom: 20px;
+  }
+  .site-footer__brand { grid-column: 1 / -1; }
+  .site-footer__brand-img { height: 36px; }
+  .site-footer__brand p { margin-top: 8px; font-size: .75rem; line-height: 1.4; max-width: 36ch; }
+  .site-footer h4 { margin-bottom: 6px; font-size: .8125rem; line-height: 1.3; }
+  .site-footer li { margin-bottom: 2px; line-height: 1.35; }
+  .site-footer a { font-size: .75rem; line-height: 1.35; }
+  .site-footer__bottom { padding-top: 16px; padding-bottom: 12px; font-size: .75rem; line-height: 1.4; }
+}
 
 /* -------- Page hero -------- */
 .page-hero {
@@ -1983,6 +2008,19 @@ body[data-lang="en"] .page-hero h1 {
 body[data-lang="en"] .page-hero {
   padding-top: clamp(40px, 5.5vw, 64px);
   padding-bottom: clamp(40px, 5.5vw, 64px);
+}
+
+/* Mobile-only type scale reductions for hero, callout, page-hero — these
+   sections take too much vertical room at default sizes on small screens.
+   Placed after the base rules so they win the cascade at the same
+   specificity. */
+@media (max-width: 720px) {
+  .hero h1 { font-size: clamp(2.5rem, 9vw, 3rem); }
+  .callout h2 { font-size: clamp(1.875rem, 7vw, 2.25rem); }
+  .callout .eyebrow { font-size: 14px; }
+  .callout p { font-size: .9375rem; }
+  .page-hero p { font-size: .9375rem; }
+  body[data-lang="en"] .page-hero p { font-size: .9375rem; }
 }
 
 /* -------- Pillars -------- */
