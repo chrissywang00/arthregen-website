@@ -137,12 +137,10 @@ main { flex: 1 0 auto; display: block; }
    the body and inflating scrollHeight, creating dead space below the footer. */
 .site-footer .site-nav__dropdown,
 .site-footer .dropdown-caret { display: none; }
-/* Hide the News dropdown (and its caret) in the mobile nav — only News
-   should appear as a single link, not a parent with sub-items. */
-@media (max-width: 960px) {
-  .site-nav__links .has-dropdown .site-nav__dropdown { display: none; }
-  .site-nav__links .has-dropdown .dropdown-caret { display: none; }
-}
+/* Mobile dropdowns (About, News) stay visible inside the hamburger drawer
+   so users can expand to the sub-items (Company/Founder, Announcements/etc.)
+   — the inline-nested layout is defined under the mobile media query below
+   and the JS already toggles `.is-open` on the parent <li>. */
 a { color: var(--navy); text-decoration: none; transition: color .2s var(--ease); }
 a:hover { color: var(--teal-600); }
 :focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 4px; }
@@ -215,6 +213,9 @@ h1 .grad, h2 .grad, h3 .grad, h4 .grad { line-height: inherit; }
 /* Tighten the last section's bottom padding so it doesn't create a large
    empty gap above the footer */
 main > section:last-child { padding-bottom: clamp(90px, 8.8vw, 138px); }
+@media (min-width: 768px) {
+  main > section:last-child { padding-bottom: clamp(110px, 10vw, 160px); }
+}
 .section--alt { background: var(--bg-alt); }
 .section--dark { background: var(--navy-900); color: rgba(255,255,255,.82); }
 .section--dark h1, .section--dark h2, .section--dark h3, .section--dark h4 { color: #fff; }
@@ -475,6 +476,22 @@ main > section:last-child { padding-bottom: clamp(90px, 8.8vw, 138px); }
   margin-top: 4px;
   border-radius: 2px;
 }
+/* Dropdown items: underline only the word, matching the nav bar's bar style
+   (2px teal bar with a 4px gap below the text). Drawn on the visible lang
+   <span> so it spans only the word width. */
+.site-nav__dropdown a.is-active::after { display: none; }
+.site-nav__dropdown a.is-active > span[lang] {
+  display: inline-block;
+  position: relative;
+}
+.site-nav__dropdown a.is-active > span[lang]::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: var(--teal);
+  margin-top: 4px;
+  border-radius: 2px;
+}
 .site-nav__right { display: flex; align-items: center; gap: 14px; justify-self: end; }
 
 .lang-toggle {
@@ -565,6 +582,10 @@ main > section:last-child { padding-bottom: clamp(90px, 8.8vw, 138px); }
     border-bottom: 1px solid var(--line);
   }
   .site-nav__dropdown li:last-child a { border-bottom: 0; }
+
+  /* Mobile-only: News has no dropdown — render it as a plain link */
+  .site-nav__links a[href="news.html"] + .site-nav__dropdown { display: none; }
+  .site-nav__links a[href="news.html"] .dropdown-caret { display: none; }
 }
 
 /* -------- Hero -------- */
@@ -590,8 +611,10 @@ main > section:last-child { padding-bottom: clamp(90px, 8.8vw, 138px); }
   .hero {
     min-height: 0;
     display: block;
-    padding: 40px 0 20px;
+    padding: 76px 0 64px;
   }
+  /* Shift the hero background video slightly left on mobile */
+  .hero .hero__video { object-position: 20% center; }
 }
 /* Background video */
 .hero__video {
@@ -809,7 +832,7 @@ a.card.card--link:focus-visible {
 }
 @media (max-width: 720px) {
   .card__desc,
-  .pillar p { font-size: .875rem; }
+  .pillar p { font-size: .8125rem; }
 }
 .card__link {
   font-weight: 600;
@@ -970,11 +993,11 @@ a.card.card--link:focus-visible {
 
 /* -------- Pull quote / callout -------- */
 .callout {
-  padding: clamp(52px, 6.5vw, 88px) clamp(40px, 5.5vw, 80px);
+  padding: clamp(32px, 4vw, 60px) clamp(40px, 5.5vw, 80px) clamp(42px, 5.2vw, 72px);
   /* Diagonal gradient — top-left to bottom-right, navy to blue. */
   background: linear-gradient(135deg, #1E3A8A 0%, #2566A0 100%);
   color: rgba(255,255,255,.86);
-  border-radius: 24px;
+  border-radius: 32px;
   position: relative;
   overflow: hidden;
 }
@@ -994,9 +1017,11 @@ a.card.card--link:focus-visible {
   max-width: 24ch;
   font-size: clamp(2.375rem, 3.8vw, 3.25rem);
   letter-spacing: -0.02em;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 .callout p { color: rgba(255,255,255,.84); max-width: 62ch; font-size: 1.0625rem; }
+.callout .eyebrow { margin-bottom: 18px; }
+.callout .mt-m { margin-top: 22px; }
 
 /* -------- Timeline -------- */
 .timeline { position: relative; padding-left: 32px; }
@@ -2120,13 +2145,18 @@ body[data-lang="en"] .page-hero {
    Placed after the base rules so they win the cascade at the same
    specificity. */
 @media (max-width: 720px) {
-  .hero h1 { font-size: clamp(2.5rem, 9vw, 3rem); }
-  body[data-lang="en"] .hero h1 { font-size: clamp(1.75rem, 7.8vw, 2.25rem); line-height: 1.08; }
+  .hero h1 { font-size: clamp(2.5rem, 9vw, 3rem); line-height: 1.2; }
+  body[data-lang="en"] .hero h1 { font-size: clamp(1.75rem, 7.8vw, 2.25rem); line-height: 1.2; }
   .hero p { line-height: 1.45; }
   .hero p :lang(ko), .hero p [lang="ko"] { line-height: 1.5; }
   .callout h2 { font-size: clamp(1.875rem, 7vw, 2.25rem); line-height: 1.18; }
   .callout h2 :lang(ko), .callout h2 [lang="ko"] { line-height: 1.22; }
-  .callout p { font-size: .9375rem; line-height: 1.5; }
+  .callout p { font-size: .8125rem; line-height: 1.5; }
+  /* Tighten vertical rhythm between callout elements on mobile */
+  .callout .eyebrow { margin-bottom: 10px; }
+  .callout h2 { margin-bottom: 8px; }
+  .callout .mt-s { margin-top: 8px; }
+  .callout .mt-m { margin-top: 14px; }
   .callout p :lang(ko), .callout p [lang="ko"] { line-height: 1.55; }
   /* Page-hero (about / rd / news / investors / announcement details) on mobile —
      both languages: h1 34px, lead p 14px */
@@ -2153,7 +2183,7 @@ body[data-lang="en"] .page-hero {
   /* Hero eyebrow — English mobile: 10px */
   body[data-lang="en"] .hero .eyebrow { font-size: 10px; }
   /* Hero H1 — English mobile: 34px (covers .grad via inherit) */
-  body[data-lang="en"] .hero h1 { font-size: 34px; line-height: 1.08; }
+  body[data-lang="en"] .hero h1 { font-size: 34px; line-height: 1.2; }
   /* Hero lead paragraph — English mobile: 14px */
   body[data-lang="en"] .hero p { font-size: 14px; }
   /* Hero CTA buttons — Korean mobile (base): slightly smaller font/pill */
@@ -2162,10 +2192,15 @@ body[data-lang="en"] .page-hero {
   body[data-lang="en"] .hero__cta .btn { padding: 12px 16px; font-size: 12px; }
   /* Hero chips — Korean mobile (base): smaller font/height */
   .hero__chips li { font-size: .75rem; padding: 4px 12px; }
+  /* Hero chips — Korean only: shorter pill height (same 12px font) */
+  body[data-lang="ko"] .hero__chips li { padding: 1px 12px; line-height: 1.4; }
   /* Hero chips — EN mobile: 10px, total height 27px */
   body[data-lang="en"] .hero__chips li { font-size: 10px; padding: 5px 14px; line-height: 1.5; }
   /* Tighten the gap between CTAs and the chip row on mobile */
-  .hero__chips { margin-top: 16px; }
+  .hero__chips { margin-top: 28px; }
+  /* Stack hero chips vertically on mobile so each chip sits on its own line
+     (both languages — KR was wrapping into 2 rows, EN already stacked). */
+  .hero__chips { flex-direction: column; align-items: flex-start; gap: 8px; }
   /* English-only: slightly smaller product card tag pill */
   body[data-lang="en"] .card__tag { font-size: .72rem; padding: 5px 10px; }
 }
@@ -2694,10 +2729,194 @@ body.page-founder #metrics .pillar p {
   grid-template-columns: 1fr;
   gap: 0;
 }
+/* Founder page — Founder Intro sec-head: stack h2 and lead vertically on
+   every screen size (mirroring the mobile single-column layout), with
+   tighter gap below the lead before the body paragraphs */
+body.page-founder #intro .sec-head {
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+body.page-founder #intro .sec-head p {
+  padding-top: 0;
+  max-width: none;
+}
+/* Founder page — tighter vertical padding for the Founder Intro section */
+body.page-founder #intro { padding-top: 80px; padding-bottom: 80px; }
+@media (max-width: 720px) {
+  body.page-founder #intro { padding-top: 48px; padding-bottom: 48px; }
+}
+/* Founder page — slightly reduce top padding of Key Metrics section */
+body.page-founder #metrics { padding-top: 56px; }
+@media (max-width: 720px) {
+  body.page-founder #metrics { padding-top: 32px; }
+}
 /* Founder page — Career Foundation timeline: tighter gap between items
    (last item keeps its existing padding-bottom: 0 from base rule) */
-body.page-founder #career .timeline__item { padding-bottom: 28px; }
+body.page-founder #career .timeline__item { padding-bottom: 14px; }
 body.page-founder #career .timeline__item:last-child { padding-bottom: 0; }
+/* Founder page — Career Foundation: align li description text with the year
+   label (these items don't use the date-prefix <strong>, so the negative
+   ul margin and large li padding-left aren't needed) */
+body.page-founder #career .timeline__item ul { margin-left: 0; }
+body.page-founder #career .timeline__item li { padding-left: 0; }
+/* Founder page — Founder Intro body paragraphs: tighter spacing between them */
+body.page-founder #intro .ceo-greeting__body p { margin: 0 0 .6rem; }
+body.page-founder #intro .ceo-greeting__body p:last-of-type { margin-bottom: 0; }
+/* Founder page — Areas of Expertise pillars: equalize heights across rows
+   on every screen size (desktop, tablet, mobile) */
+body.page-founder #expertise .pillars { grid-auto-rows: 1fr; }
+/* Same equalization for Global Relevance pillars */
+body.page-founder #relevance .pillars { grid-auto-rows: 1fr; }
+/* Global Relevance: keep all 3 pillars in a single horizontal row on
+   tablet too (base rule collapses to 2 cols at ≤900px, restored here).
+   Mobile (≤720px) still falls back to a single-column stack. */
+@media (min-width: 721px) {
+  body.page-founder #relevance .pillars { grid-template-columns: repeat(3, 1fr); }
+}
+/* Mobile only: strip card border / background / ::after gradient strip on
+   the four content-heavy pillar sections so the copy reads inline instead
+   of in heavy boxes (Home Mission, Founder Expertise & Relevance, Investors
+   Why). Founder Key Metrics keeps its boxed cards. */
+@media (max-width: 720px) {
+  body.home #mission .pillar,
+  body.page-founder #expertise .pillar,
+  body.page-founder #relevance .pillar,
+  #why .pillar {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+  }
+  body.home #mission .pillar::before,
+  body.home #mission .pillar::after,
+  body.page-founder #expertise .pillar::before,
+  body.page-founder #expertise .pillar::after,
+  body.page-founder #relevance .pillar::before,
+  body.page-founder #relevance .pillar::after,
+  #why .pillar::before,
+  #why .pillar::after {
+    display: none;
+  }
+  /* Restore vertical rhythm between stacked items since cards collapse */
+  body.home #mission .pillars,
+  body.page-founder #expertise .pillars,
+  body.page-founder #relevance .pillars,
+  #why .pillars {
+    gap: 28px;
+    grid-auto-rows: auto;
+  }
+  /* Home Platform (AR-001/002/003) product cards: keep all original
+     positioning/padding, only hide the visible border on mobile. */
+  body.home #platform .card {
+    border-color: transparent;
+    box-shadow: none;
+  }
+  body.home #platform .card::after { display: none; }
+  /* Slightly smaller product tag pill on mobile */
+  body.home #platform .card__tag {
+    font-size: .6875rem;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+  /* Tighter spacing between product visual → tag → name on mobile */
+  body.home #platform .product-visual { margin-bottom: 14px; }
+  body.home #platform .card__name { margin: 0 0 8px; }
+  /* Tighter gap between AR-001/002/003 stacked cards on mobile.
+     With invisible borders, vertical padding inside each card just creates
+     dead space — collapse it so the next image sits closer to the previous
+     card's "자세히 보기 →" link. */
+  body.home #platform .cards { gap: 0; }
+  body.home #platform .card { padding-top: 20px; padding-bottom: 20px; }
+  /* Tighter gap between the platform sec-head (lead p) and the cards row */
+  body.home #platform .sec-head { margin-bottom: 16px; }
+  /* Tighter gap between the mission sec-head (lead p) and the pillars row */
+  body.home #mission .sec-head { margin-bottom: 20px; }
+  /* Tighten gap between the Platform section and the "How we design
+     regeneration" callout section that follows it (mobile only) */
+  body.home #platform { padding-bottom: 24px; }
+  body.home #platform + .section { padding-top: 24px; }
+  /* Slightly smaller mission lead on mobile */
+  body.home #mission .lead { font-size: .9375rem; }
+  /* Slightly smaller platform lead on mobile (same treatment as mission lead) */
+  body.home #platform .lead { font-size: .9375rem; }
+  /* Slightly reduce page-hero lead p on mobile (about / rd / news / investors) */
+  .page-hero p,
+  body[data-lang="en"] .page-hero p { font-size: 13px; }
+  /* About page #company info cards: hide visible borders on mobile only */
+  #company .card {
+    border-color: transparent;
+    box-shadow: none;
+  }
+  #company .card::after { display: none; }
+  /* Lay each pillar out as: number badge + h3 on row 1, body p on row 2.
+     This makes the icon read inline with the title (side-by-side) and the
+     body copy flows the full content width underneath. */
+  body.home #mission .pillar,
+  body.page-founder #expertise .pillar,
+  body.page-founder #relevance .pillar,
+  #why .pillar {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "icon h3"
+      "p    p";
+    column-gap: 10px;
+    row-gap: 6px;
+    align-items: center;
+  }
+  /* Strip the colored badge box — keep just the number itself, left-aligned */
+  body.home #mission .pillar__icon,
+  body.page-founder #expertise .pillar__icon,
+  body.page-founder #relevance .pillar__icon,
+  #why .pillar__icon {
+    grid-area: icon;
+    margin-bottom: 0;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: transparent;
+    color: var(--teal-600);
+    font-size: 1.25rem;
+    letter-spacing: .04em;
+  }
+  body.home #mission .pillar h3,
+  body.page-founder #expertise .pillar h3,
+  body.page-founder #relevance .pillar h3,
+  #why .pillar h3 {
+    grid-area: h3;
+    margin-bottom: 0;
+  }
+  body.home #mission .pillar p,
+  body.page-founder #expertise .pillar p,
+  body.page-founder #relevance .pillar p,
+  #why .pillar p {
+    grid-area: p;
+  }
+}
+/* Tablet-only: shrink Global Relevance cards so they read closer to square
+   (213px wide → ~260–290px tall instead of 447px) by reducing padding,
+   font sizes, and line-heights. */
+@media (min-width: 721px) and (max-width: 900px) {
+  body.page-founder #relevance .pillar {
+    padding: 22px 20px 24px;
+  }
+  body.page-founder #relevance .pillar__icon {
+    width: 40px; height: 40px;
+    font-size: .75rem;
+    margin-bottom: 16px;
+  }
+  body.page-founder #relevance .pillar h3 {
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+    line-height: 1.25;
+  }
+  body.page-founder #relevance .pillar p {
+    font-size: .8125rem;
+    line-height: 1.45;
+  }
+}
 @media (max-width: 820px) {
   .ceo-greeting { grid-template-columns: 1fr; gap: 36px; }
   .ceo-greeting__photo { max-width: 180px; position: static; aspect-ratio: auto; }
